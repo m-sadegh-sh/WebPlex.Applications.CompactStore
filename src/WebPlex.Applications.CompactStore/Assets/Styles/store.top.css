@@ -1,0 +1,231 @@
+﻿.WebPlex-TopContainer {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.WebPlex-TopLinks {
+    margin: 0;
+    padding: 8px 0;
+}
+
+.WebPlex-TopLinks .WebPlex-LinkItem {
+    float: right;
+    list-style: none;
+    margin-left: 25px;
+    position: relative;
+}
+
+.WebPlex-TopLinks .WebPlex-LinkItem.WebPlex-LastItem,
+.WebPlex-TopLinks .WebPlex-LinkItem:last-child {
+    margin-left: 0;
+}
+
+.WebPlex-TopLinks .WebPlex-LinkAnchor {
+    color: rgba(150, 150, 150, 255);
+    transition: all 0.3s ease;
+}
+
+.WebPlex-TopLinks > .WebPlex-LinkItem > .WebPlex-LinkAnchor:hover,
+.WebPlex-TopLinks > .WebPlex-LinkItem > .WebPlex-LinkAnchor:active {
+    color: rgba(100, 100, 100, 255);
+}
+
+.WebPlex-TopLinks > .WebPlex-LinkItem > .WebPlex-LinkAnchor:active {
+    margin: 1px 0 -1px;
+}
+
+.WebPlex-ParentItem {
+    border: solid 1px transparent;
+    float: left;
+    margin: -6px 0;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.WebPlex-ParentItem:hover,
+.WebPlex-ParentItem[disabled] {
+    border-color: rgba(175, 175, 175, 255);
+    cursor: pointer;
+}
+
+.WebPlex-ParentItem[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.WebPlex-ParentItem.WebPlex-Opened {
+    border-color: rgba(245, 108, 2, 255);
+}
+
+.WebPlex-ParentItem .WebPlex-Button > .WebPlex-ViewPort {
+    background: url(../Images/Sprite.png) no-repeat -318px -8px;
+    float: right;
+    height: 8px;
+    margin: 8px 0 8px 5px;
+    width: 16px;
+}
+
+.WebPlex-ParentItem.WebPlex-Opened .WebPlex-Button > .WebPlex-ViewPort {
+    background: url(../Images/Sprite.png) no-repeat -318px 0;
+}
+
+.WebPlex-ParentItem .WebPlex-Icon {
+    display: block;
+}
+
+.WebPlex-ParentItem .WebPlex-Icon .WebPlex-ViewPort {
+    float: left;
+    height: 24px;
+    margin-right: 5px;
+}
+
+.WebPlex-ParentItem .WebPlex-CartIcon .WebPlex-ViewPort {
+    background: url(../Images/Sprite.png) no-repeat -282px -24px;
+    width: 26px;
+}
+
+.WebPlex-ParentItem .WebPlex-UserIcon .WebPlex-ViewPort {
+    background: url(../Images/Sprite.png) no-repeat -282px 0;
+    width: 24px;
+}
+
+.WebPlex-LinkItem .WebPlex-LinkItem .WebPlex-LinkAnchor,
+.WebPlex-ParentItem .WebPlex-Label {
+    padding: 0 8px;
+}
+
+.WebPlex-LinkItem .WebPlex-LinkItem .WebPlex-LinkAnchor {
+    color: rgba(95, 95, 95, 255);
+}
+
+.WebPlex-ParentItem .WebPlex-Label {
+    background: rgba(245, 108, 2, 1);
+    color: rgba(255, 255, 255, 1);
+    float: right;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.WebPlex-ParentItem .WebPlex-Label:focus,
+.WebPlex-ParentItem .WebPlex-Label:active,
+.WebPlex-ParentItem.WebPlex-Opened .WebPlex-Label {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.WebPlex-SubLinksPlaceholder {
+    left: 0;
+    margin-top: -3px;
+    opacity: 0;
+    position: absolute;
+    top: 14px;
+    transition: all 0.3s ease;
+    visibility: collapse;
+    z-index: 9999;
+}
+
+.WebPlex-SubLinksPlaceholder.WebPlex-Opened {
+    opacity: 1;
+    top: 42px;
+    visibility: visible;
+}
+
+ul.WebPlex-SubLinksPlaceholder {
+    padding: 5px;
+    width: 200px;
+}
+
+ul.WebPlex-SubLinksPlaceholder.WebPlex-Opened {
+    opacity: 1;
+    top: 34px;
+    visibility: visible;
+}
+
+ul.WebPlex-SubLinksPlaceholder .WebPlex-LinkItem {
+    background: rgba(245, 245, 245, 1);
+    display: block;
+    float: none;
+    margin-left: 0;
+}
+
+ul.WebPlex-SubLinksPlaceholder .WebPlex-LinkItem .WebPlex-LinkAnchor:hover {
+    background: rgba(200, 200, 200, 0.25);
+}
+
+ul.WebPlex-SubLinksPlaceholder .WebPlex-LinkItem .WebPlex-LinkAnchor:active {
+    background: rgba(130, 130, 130, 0.25);
+}
+
+ul.WebPlex-SubLinksPlaceholder .WebPlex-UserItem {
+    background: rgba(255, 255, 255, 0.15);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.25);
+    margin: -5px -5px 5px;
+}
+
+ul.WebPlex-SubLinksPlaceholder .WebPlex-LinkItem .WebPlex-LinkAnchor,
+ul.WebPlex-SubLinksPlaceholder .WebPlex-UserItem div {
+    display: block;
+    padding: 5px 10px;
+}
+
+ul.WebPlex-SubLinksPlaceholder .WebPlex-LinkItem * {
+    transition: background 0.3s ease;
+}
+
+ul.WebPlex-SubLinksPlaceholder .WebPlex-LinkItem .WebPlex-LinkAnchor span,
+ul.WebPlex-SubLinksPlaceholder .WebPlex-LinkItem .WebPlex-LinkAnchor:active span {
+    background: rgba(255, 255, 255, 0.15);
+    color: inherit;
+    float: left;
+    margin-left: -5px;
+    padding: 0 8px;
+    transition: all 0.3s ease;
+}
+
+ul.WebPlex-SubLinksPlaceholder .WebPlex-LinkItem .WebPlex-LinkAnchor:hover span,
+ul.WebPlex-SubLinksPlaceholder .WebPlex-LinkItem .WebPlex-LinkAnchor:active span {
+    background: rgba(245, 129, 39, 1);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25);
+    color: rgba(255, 255, 255, 1);
+}
+
+ul.WebPlex-SubLinksPlaceholder .WebPlex-UserItem .WebPlex-UserText {
+    line-height: 20px;
+    margin: 0;
+}
+
+ul.WebPlex-SubLinksPlaceholder .WebPlex-UserItem .WebPlex-UserText strong {
+    color: rgba(0, 0, 0, 255);
+    display: block;
+    font: bold 16px NazaninBold;
+    margin-top: 5px;
+}
+
+ul.WebPlex-SubLinksPlaceholder .WebPlex-UserItem .WebPlex-UserImage {
+    border: solid 5px rgba(255, 255, 255, 255);
+    border: solid 5px rgba(255, 255, 255, 0.15);
+    margin: 0 10px 0 -5px;
+}
+
+ul.WebPlex-SubLinksPlaceholder .WebPlex-UserItem .WebPlex-UserImage .WebPlex-Avatar {
+    display: block;
+    height: 48px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    width: 48px;
+}
+
+ul.WebPlex-SubLinksPlaceholder .WebPlex-UserItem .WebPlex-UserImage .WebPlex-Avatar.WebPlex-Default {
+    background: url(../Images/Sprite.png) no-repeat;
+}
+
+ul.WebPlex-SubLinksPlaceholder .WebPlex-UserItem .WebPlex-UserImage.WebPlex-Male .WebPlex-Avatar.WebPlex-Default {
+    background-position: -328px -52px;
+}
+
+ul.WebPlex-SubLinksPlaceholder .WebPlex-UserItem .WebPlex-UserImage.WebPlex-Female .WebPlex-Avatar.WebPlex-Default {
+    background-position: -376px -52px;
+}
+
+ul.WebPlex-SubLinksPlaceholder .WebPlex-UserItem:hover .WebPlex-UserImage .WebPlex-Avatar {
+    opacity: 1;
+}

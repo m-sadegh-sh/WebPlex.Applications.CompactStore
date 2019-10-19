@@ -1,0 +1,41 @@
+﻿@model CartItemModel
+
+<tr>
+    <td class="WebPlex-ProductTitle">
+        <span>
+            @Model.Title
+        </span>
+    </td>
+    <td class="WebPlex-Count">
+        @Ajax.ActionLink(Resources.Views_Shared_DisplayTemplates_CartItemModel_AddToCart, MVC.Cart.Add(Model.Id, ReturnUrl), Ajax.Options(onBegin: "webPlexAddToCartOnBegin", onSuccess: "webPlexAddToCartOnSuccess", onFailure: "webPlexAddToCartOnFailure", onComplete: "webPlexAddToCartOnComplete"), new {
+            @class = "WebPlex-AddToCart",
+            data_product_id = Model.Id,
+            title = Resources.Views_Shared_DisplayTemplates_CartItemModel_AddToCart
+        })
+        <span>
+            @Model.Count
+        </span>   
+        @Ajax.ActionLink(Resources.Views_Shared_DisplayTemplates_CartItemModel_RemoveFromCart, MVC.Cart.Remove(Model.Id, false, ReturnUrl), Ajax.Options(onBegin: "webPlexRemoveFromCartOnBegin", onSuccess: "webPlexRemoveFromCartOnSuccess", onFailure: "webPlexRemoveFromCartOnFailure", onComplete: "webPlexRemoveFromCartOnComplete"), new {
+            @class = "WebPlex-RemoveFromCart",
+            data_product_id = Model.Id,
+            title = Resources.Views_Shared_DisplayTemplates_CartItemModel_RemoveFromCart
+        })
+    </td>
+    <td class="WebPlex-UnitPrice">
+        <span>
+            @Html.DisplayFor(model => model.UnitPrice, "Currency.Simple")
+        </span>
+    </td>
+    <td class="WebPlex-TotalPrice">
+        <span>
+            @Html.DisplayFor(model => model.TotalPrice, "Currency.Simple")
+        </span>
+    </td>
+    <td class="WebPlex-Actions">
+        @Ajax.ActionLink(Resources.Views_Shared_DisplayTemplates_CartItemModel_RemoveAllFromCart, MVC.Cart.Remove(Model.Id, true, ReturnUrl), Ajax.Options(onBegin: "webPlexRemoveFromCartOnBegin", onSuccess: "webPlexRemoveFromCartOnSuccess", onFailure: "webPlexRemoveFromCartOnFailure", onComplete: "webPlexRemoveFromCartOnComplete"), new {
+            @class = "WebPlex-RemoveAllFromCart",
+            data_product_id = Model.Id,
+            title = Resources.Views_Shared_DisplayTemplates_CartItemModel_RemoveAllFromCart
+        })
+    </td>
+</tr>

@@ -1,0 +1,33 @@
+﻿@{
+    var messages = TempDateHelpers.GetMessages(TempData);
+}
+
+<!DOCTYPE html>
+<html class="WebPlex-Html">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@(Resources.Views_Shared_DefaultLayout_Title + Resources.Views_Shared_TitleSeparator + ViewBag.Title)</title>
+    <meta name="keywords" content="@(Resources.Views_Shared_DefaultLayout_Keywords + Resources.Views_Shared_KeywordSeparator + ViewBag.Keywords)"/>
+    <meta name="description" content="@(ViewBag.Description ?? Resources.Views_Shared_DefaultLayout_Description)"/>
+    <link rel="shortcut icon" href="@Assets.Images.FavIcon_png"/>
+    @Styles.Render("~/Assets/Styles/Store")
+    @RenderSection("InlineStyles", false)
+</head>
+<body class="WebPlex-Body">
+<div class="WebPlex-Container">
+    @RenderBody()
+</div>
+@Scripts.Render("~/Assets/Scripts/jQuery")
+@Scripts.Render("~/Assets/Scripts/jQuery-Validate")
+@Scripts.Render("~/Assets/Scripts/jQuery-Ajax")
+@RenderSection("InlineScripts", false)
+@Scripts.Render("~/Assets/Scripts/Store")
+
+@if (messages.Any()) {
+    <script type="text/javascript">
+        var webPlexMessages = @Html.Raw(JsonConvert.SerializeObject(messages));
+    </script>
+}
+</body>
+</html>

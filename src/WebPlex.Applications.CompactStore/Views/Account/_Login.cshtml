@@ -1,0 +1,52 @@
+﻿@model LoginModel
+
+@using (Ajax.BeginForm(MVC.Account.Login(), Ajax.Options(
+    onBegin: "webPlexFormOnBegin",
+    onSuccess: "webPlexFormOnSuccess",
+    onFailure: "webPlexFormOnFailure",
+    onComplete: "webPlexFormOnComplete",
+    updateTargetId: "WebPlex-LoginContainer"
+                                                ))) {
+    @Html.AntiForgeryToken()
+    @Html.Hidden("ReturnUrl", ReturnUrl)
+    <div class="WebPlex-FormContainer WebPlex-Clearfix">
+        <h3 class="WebPlex-Title WebPlex-Clearfix">
+            @Html.ActionLink(Resources.Views_BackToHome, MVC.Home.Root(), new {
+                @class = "WebPlex-BackToHome WebPlex-PullLeft"
+            })
+            @Resources.Views_Account_Login_FormTitle
+        </h3>
+        <div class="WebPlex-FormGroup WebPlex-Clearfix">
+            <div class="WebPlex-FormFields WebPlex-PullLeft WebPlex-Clearfix">
+                <div class="WebPlex-FormRow">
+                    @Html.TextBoxFor(model => model.CellPhoneOrEmail, new {
+                        @class = Html.GetModelState(model => model.CellPhoneOrEmail, "WebPlex-FormInput WebPlex-Opposite"),
+                        data_auto_focus = true,
+                        placeholder = Html.DisplayNameFor(model => model.CellPhoneOrEmail)
+                    })
+                    @Html.ValidationMessageFor(model => model.CellPhoneOrEmail)
+                </div>
+                <div class="WebPlex-FormRow">
+                    @Html.PasswordFor(model => model.Password, new {
+                        @class = Html.GetModelState(model => model.Password, "WebPlex-FormInput"),
+                        placeholder = Html.DisplayNameFor(model => model.Password)
+                    })
+                    @Html.ValidationMessageFor(model => model.Password)
+                </div>
+            </div>
+            <p class="WebPlex-Description">
+                @Html.Raw(Resources.Views_Account_Login_Description)
+            </p>
+        </div>
+    </div>
+    <div class="WebPlex-ButtonStack WebPlex-PullLeft WebPlex-Clearfix">
+        <button class="WebPlex-Button WebPlex-Login">
+            <span class="WebPlex-ViewPort"></span>@Resources.Views_Account_Login_Login
+        </button>
+    </div>
+    <div class="WebPlex-ButtonStack WebPlex-Secondary WebPlex-PullRight WebPlex-Clearfix">
+        @Html.ActionLink(Resources.Views_Account_Login_Register, MVC.Account.Register(ReturnUrl), new {
+            @class = "WebPlex-Button"
+        })
+    </div>
+}

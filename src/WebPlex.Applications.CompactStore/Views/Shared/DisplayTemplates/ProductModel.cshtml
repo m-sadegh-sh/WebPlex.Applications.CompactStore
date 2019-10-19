@@ -1,0 +1,47 @@
+﻿@model ProductModel
+
+@{
+    var listPictureLargeUrl = PictureHelpers.LargeUrlOrDefault(Model.GetListPicture());
+    var hasListPicture = listPictureLargeUrl != null;
+}
+
+<li class="WebPlex-Product WebPlex-PullRight@(Request.IsAjaxRequest() ? null : " WebPlex-Visible")">
+    @if (hasListPicture) {
+        <img class="WebPlex-Image" alt="@Model.Title" title="@Model.Title" src="@Url.Action(MVC.Optimization.Image(263, 214, listPictureLargeUrl))"/>
+    } else {
+        <p class="WebPlex-ImagePlaceholder">
+            <span>
+                @Resources.Views_Shared_DisplayTemplates_ProductModel_DefaultImage
+            </span>
+        </p>
+    }
+    <div class="WebPlex-Placeholder@(!hasListPicture ? " WebPlex-NoImage" : null)"></div>
+
+    <div class="WebPlex-Overlay WebPlex-Clearfix">
+        <a href="@Url.Action(MVC.Product.Details(Model.Category.Slug, Model.Slug))" class="WebPlex-Details">
+            <h3 class="WebPlex-Title">
+                @Model.Title
+            </h3>
+        </a>
+
+        @if (!string.IsNullOrEmpty(Model.Summary)) {
+            <p class="WebPlex-Summary">
+                @Model.Summary
+            </p>
+        }
+
+        <div class="WebPlex-Actions WebPlex-PullLeft WebPlex-PullChildren WebPlex-Clearfix">
+            <span class="WebPlex-UnitPrice">
+                @Html.DisplayFor(model => model.UnitPrice)
+            </span>
+            @Ajax.NormalizedActionLink(Resources.Views_Shared_DisplayTemplates_ProductModel_AddToCart, MVC.Cart.Add(Model.Id, Request.RawUrl), Ajax.Options(onBegin: "webPlexAddToCartOnBegin", onSuccess: "webPlexAddToCartOnSuccess", onFailure: "webPlexAddToCartOnFailure", onComplete: "webPlexAddToCartOnComplete"), new {
+                @class = "WebPlex-AddToCart",
+                title = Resources.Views_Shared_DisplayTemplates_ProductModel_AddToCart
+            }).UseContent(@"<span class=""WebPlex-ViewPort"">{0}</span>")
+            @Html.ActionLink(Resources.Views_Shared_DisplayTemplates_ProductModel_Details, MVC.Product.Details(Model.Category.Slug, Model.Slug), new {
+                @class = "WebPlex-GoToDetails",
+                title = Resources.Views_Shared_DisplayTemplates_ProductModel_Details
+            }).UseContent(@"<span class=""WebPlex-ViewPort"">{0}</span>")
+        </div>
+    </div>
+</li>

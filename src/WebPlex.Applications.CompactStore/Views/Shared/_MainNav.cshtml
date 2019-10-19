@@ -1,0 +1,55 @@
+﻿@{
+    var categoryRepository = DependencyResolver.Current.GetService<ICategoryRepository>();
+    var categories = categoryRepository.GetParents().Take(16).ToList();
+    var categoriesCount = categories.Count;
+}
+
+@functions {
+
+    private string GetClass(int position, CategoryModel category, int itemsPerRow, int totalCount) {
+        var @class = "WebPlex-NavItem WebPlex-PullRight";
+
+        if (position <= totalCount/2)
+            @class += " WebPlex-TopItem";
+        else
+            @class += " WebPlex-BottomItem";
+
+        if (position%itemsPerRow == 0)
+            @class += " WebPlex-LastItem";
+
+        if (CurrentCategory == category)
+            @class += " WebPlex-ActiveItem";
+
+        if (!string.IsNullOrEmpty(category.CssClass)) {
+            @class += string.Format(" WebPlex-{0}", category.CssClass);
+        }
+
+        return @class;
+    }
+
+}
+
+<ul class="WebPlex-MainNav WebPlex-PullLeft">
+    @for (var position = 1; position <= categoriesCount; position++) {
+        var category = categories[position - 1];
+
+        <li class="@GetClass(position, category, categoriesCount/2, categoriesCount)">
+            @Html.ActionLink(Resources.Views_Shared_Aside_All, MVC.Product.List(null, null, null, null, null), new {
+                @class = "WebPlex-RemoveCategory",
+                title = Resources.Views_Shared_MainNav_RemoveCategory
+            }).UseContent(@"<span class=""WebPlex-ViewPort"">{0}</span>")
+            <a class="WebPlex-NavAnchor" href="@Url.Action(MVC.Product.ListByCategory(category.Slug, null, null, null, null, null))">
+                <span class="WebPlex-NavIcon">
+                    <span class="WebPlex-ViewPort"></span>
+                    <span class="WebPlex-NavText">
+                        @category.Title
+                    </span>
+                </span>
+            </a>
+        </li>
+
+        if (position%(categoriesCount/2) == 0) {
+            <li class="WebPlex-Clearfix"></li>
+        }
+    }
+</ul>

@@ -1,0 +1,28 @@
+﻿.WebPlex-FooterContainer {
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: 25px;
+}
+
+.WebPlex-FooterContainer .WebPlex-Fluid {
+    padding: 8px;
+}
+
+.WebPlex-FooterContainer .WebPlex-PoweredBy {
+    direction: ltr;
+    text-align: left;
+}
+
+.WebPlex-FooterContainer .WebPlex-PoweredBy .WebPlex-Icon {
+    background: url(../Images/Sprite.png) no-repeat -370px 0;
+    display: inline-block;
+    float: left;
+    height: 12px;
+    margin-right: 5px;
+    width: 23px;
+}
+
+.WebPlex-FooterContainer .WebPlex-PoweredBy,
+.WebPlex-FooterContainer .WebPlex-PoweredBy a {
+    color: rgba(150, 150, 150, 255);
+    font: normal 11px Verdana;
+}

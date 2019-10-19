@@ -1,0 +1,4 @@
+﻿@using WebPlex.Applications.CompactStore.Mapping.Formatters
+@model DateTime
+
+<span title="@PersianDateConverter.ToPersianDate(Model.ToLocalTime())">@DateTimeFormatter.FormatValue(Model)</span>

@@ -1,0 +1,143 @@
+﻿.WebPlex-MainContainer .WebPlex-AsideContainer {
+    overflow: initial;
+    width: 290px;
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup {
+    background: rgba(245, 245, 245, 255);
+    box-shadow: 0 2px 1px rgba(190, 190, 190, 255);
+    display: block;
+    margin: 0 0 10px 0;
+    padding: 10px;
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup:last-child {
+    margin-bottom: 0;
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup li {
+    list-style: none;
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup li.WebPlex-Title {
+    left: 3px;
+    margin: -10px 0 0 -10px;
+    opacity: 0;
+    position: relative;
+    top: -4px;
+    transition: all 0.3s ease;
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup:hover li.WebPlex-Title {
+    opacity: 1;
+    top: 5px;
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup li.WebPlex-Title span {
+    background: rgba(245, 245, 245, 255);
+    border: solid 2px rgba(150, 150, 150, 0.25);
+    color: rgba(95, 95, 95, 255);
+    font: normal 12px Yekan;
+    font-style: italic;
+    padding: 3px 6px;
+}
+
+.WebPlex-MainContainer #WebPlex-Search {
+    position: relative;
+}
+
+.WebPlex-MainContainer #WebPlex-Search .WebPlex-Query {
+    background: rgba(255, 255, 255, 255);
+    border: none;
+    box-shadow: inset 0 0 15px 0 rgba(100, 100, 100, 0.35);
+    font: normal 16px Nazanin;
+    outline: solid 1px transparent;
+    outline-offset: 1px;
+    padding: 2% 5% 2% 12%;
+    transition: all 0.3s ease;
+    width: 83%;
+}
+
+.WebPlex-MainContainer #WebPlex-Search .WebPlex-Query:focus {
+    outline-color: rgba(200, 200, 200, 255);
+}
+
+.WebPlex-MainContainer #WebPlex-Search .WebPlex-Icon {
+    background: url(../Images/Sprite.png) no-repeat -306px 0 rgba(255, 255, 255, 255);
+    height: 12px;
+    left: 10px;
+    position: absolute;
+    top: 12px;
+    width: 12px;
+}
+
+.WebPlex-MainContainer #WebPlex-Search .WebPlex-Icon:hover {
+    cursor: text;
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup a {
+    color: rgba(95, 95, 95, 255);
+    display: block;
+    font: bold 18px NazaninBold;
+    line-height: 18px;
+    padding: 8px 15px 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup a:hover {
+    background-color: rgba(200, 200, 200, 0.25);
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup a.Active {
+    background-color: rgba(130, 130, 130, 0.25);
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup a.Active {
+    border-left: solid 10px rgba(100, 100, 100, 0.25);
+    margin-left: -20px;
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup a span.WebPlex-SortDirection {
+    background: rgba(100, 100, 100, 0.5);
+    margin: -5px;
+    margin-left: -12px;
+    overflow: hidden;
+    padding: 7px;
+    transition: all 0.3s ease;
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup a span.WebPlex-SortDirection .WebPlex-ViewPort {
+    display: block;
+    height: 16px;
+    position: relative;
+    width: 15px;
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup a.Active span.WebPlex-SortDirection {
+    margin-left: -2px;
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup a:hover span.WebPlex-SortDirection,
+.WebPlex-MainContainer .WebPlex-AsideGroup a.Active span.WebPlex-SortDirection {
+    background-color: rgba(100, 100, 100, 0.75);
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup a.Active span.WebPlex-SortDirection {
+    box-shadow: inset 0 0 4px 1px rgba(100, 100, 100, 0.5);
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup a span.WebPlex-Ascending .WebPlex-ViewPort {
+    background: url(/Assets/Images/Sprite.png) no-repeat -308px -16px;
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup a span.WebPlex-Descending .WebPlex-ViewPort {
+    background: url(/Assets/Images/Sprite.png) no-repeat -323px -16px;
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup a:hover span.WebPlex-Ascending .WebPlex-ViewPort {
+    -webkit-animation: goToUp 0.3s 0 1 ease-in-out both;
+}
+
+.WebPlex-MainContainer .WebPlex-AsideGroup a:hover span.WebPlex-Descending .WebPlex-ViewPort {
+    -webkit-animation: goToBottom 0.3s 0 1 ease-in-out both;
+}

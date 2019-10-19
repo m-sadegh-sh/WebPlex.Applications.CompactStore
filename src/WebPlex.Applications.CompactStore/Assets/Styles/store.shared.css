@@ -1,0 +1,293 @@
+﻿a {
+    text-decoration: none;
+}
+
+* {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+::selection {
+    background: rgba(245, 108, 2, 0.2);
+}
+
+::-moz-selection {
+    background: rgba(245, 108, 2, 0.2);
+}
+
+.WebPlex-PullRight,
+.WebPlex-PullRight.WebPlex-PullChildren > * {
+    float: right;
+}
+
+.WebPlex-PullLeft,
+.WebPlex-PullLeft.WebPlex-PullChildren > * {
+    float: left;
+}
+
+.WebPlex-Gone {
+    display: none !important;
+}
+
+.WebPlex-Invisible {
+    height: 0 !important;
+    overflow: hidden !important;
+    width: 0 !important;
+}
+
+.WebPlex-Clearfix {
+    overflow: hidden;
+}
+
+    .WebPlex-Clearfix:before,
+    .WebPlex-Clearfix:after {
+        content: " ";
+        display: table;
+    }
+
+    .WebPlex-Clearfix:after {
+        clear: both;
+    }
+
+.WebPlex-TopContainer .WebPlex-Fluid,
+.WebPlex-TopContainer .WebPlex-TopLinks {
+    overflow: initial !important;
+}
+
+.WebPlex-Html,
+.WebPlex-Body {
+    direction: rtl;
+    margin: 0 auto;
+    padding: 0;
+    text-align: right;
+}
+
+.WebPlex-Body {
+    background: url(../Images/BackgroundPattern.png) repeat;
+    font: normal 15px Nazanin;
+}
+
+.WebPlex-Fluid {
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+}
+
+.WebPlex-NarrowContainer .WebPlex-Fluid {
+    position: relative;
+    width: 600px;
+}
+
+.WebPlex-NarrowContainer .WebPlex-ContentContainer {
+    margin-top: 25px;
+}
+
+.WebPlex-FormContainer {
+    background-color: rgba(245, 245, 245, 255);
+    padding: 10px;
+}
+
+    .WebPlex-FormContainer .WebPlex-FormGroup {
+        border-top: solid 1px rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+        overflow: initial;
+        padding-top: 10px;
+    }
+
+    .WebPlex-FormContainer .WebPlex-FormFields {
+        overflow: initial;
+        width: 250px;
+    }
+
+    .WebPlex-FormContainer .WebPlex-FormGroup .WebPlex-Description {
+        margin-left: 260px;
+    }
+
+    .WebPlex-FormContainer .WebPlex-FormRow {
+        margin-bottom: 4px;
+        min-height: 59px;
+    }
+
+        .WebPlex-FormContainer .WebPlex-FormRow:last-child {
+            margin-bottom: 0;
+        }
+
+    .WebPlex-FormContainer .WebPlex-FormInput {
+        background: rgba(255, 255, 255, 255);
+        border: none;
+        box-shadow: inset 0 0 15px 0 rgba(100, 100, 100, 0.35);
+        color: rgba(95, 95, 95, 255);
+        font: normal 16px Nazanin;
+        outline: solid 1px transparent;
+        outline-offset: 1px;
+        padding: 2% 5%;
+        position: relative;
+        transition: all 0.3s ease;
+        width: 90%;
+        z-index: 1;
+    }
+
+        .WebPlex-FormContainer .WebPlex-FormInput:focus {
+            outline-color: rgba(200, 200, 200, 255);
+        }
+
+form[disabled] .WebPlex-FormInput,
+form[disabled] .WebPlex-FormInput:hover {
+    background: rgba(183, 183, 183, 0.25);
+    cursor: not-allowed;
+    outline: none !important;
+}
+
+.WebPlex-FormContainer .WebPlex-FormInput.WebPlex-Found {
+    box-shadow: inset 0 0 15px 0 rgba(74, 190, 37, 0.35);
+    outline-color: rgba(74, 190, 37, 0.35);
+}
+
+.WebPlex-FormContainer .WebPlex-FormInput.WebPlex-Wrong {
+    box-shadow: inset 0 0 15px 0 rgba(190, 37, 37, 0.35);
+    outline-color: rgba(190, 37, 37, 0.35);
+}
+
+.WebPlex-FormContainer .WebPlex-FormInput span {
+    color: rgba(0, 0, 0, 255);
+}
+
+.WebPlex-FormContainer .WebPlex-FormRow.WebPlex-InlineCommand {
+    position: relative;
+}
+
+    .WebPlex-FormContainer .WebPlex-FormRow.WebPlex-InlineCommand .WebPlex-FormInput {
+        display: inline-block;
+    }
+
+        .WebPlex-FormContainer .WebPlex-FormRow.WebPlex-InlineCommand .WebPlex-FormInput > span {
+            margin-left: 41px;
+        }
+
+    .WebPlex-FormContainer .WebPlex-FormRow.WebPlex-InlineCommand .WebPlex-Button {
+        height: 16px;
+        left: 0;
+        margin: 5px;
+        overflow: hidden;
+        padding: 4px 5px;
+        position: absolute;
+        text-indent: 9999px;
+        top: 0;
+        z-index: 2;
+    }
+
+        .WebPlex-FormContainer .WebPlex-FormRow.WebPlex-InlineCommand .WebPlex-Button .WebPlex-ViewPort {
+            margin: 0;
+        }
+
+.WebPlex-FormContainer span[data-valmsg-replace] {
+    background: rgba(255, 255, 255, 0.05);
+    display: block;
+    font-size: 15px;
+    margin-bottom: 5px;
+    min-height: 23px;
+    opacity: 0;
+    padding: 2px 5px 0;
+    position: relative;
+    z-index: 0;
+}
+
+.WebPlex-FormContainer .WebPlex-FormRow:last-child span[data-valmsg-replace] {
+    margin-bottom: 0;
+}
+
+.WebPlex-FormContainer span[data-valmsg-replace].field-validation-error,
+.WebPlex-FormContainer span[data-valmsg-replace].field-validation-error span {
+    color: rgba(255, 0, 0, 255);
+    opacity: 1;
+}
+
+.WebPlex-FormContainer .WebPlex-FormInput.WebPlex-Opposite {
+    direction: ltr;
+    text-align: left;
+}
+
+.WebPlex-FormContainer .WebPlex-Title {
+    color: rgba(245, 108, 2, 255);
+    font: normal 20px Yekan;
+    line-height: 20px;
+    margin: 0;
+}
+
+    .WebPlex-FormContainer .WebPlex-Title .WebPlex-BackToHome {
+        background: url(../Images/Sprite.png) no-repeat -344px -30px;
+        height: 23px;
+        overflow: hidden;
+        text-indent: -999px;
+        width: 24px;
+    }
+
+.WebPlex-FormContainer .WebPlex-Description {
+    color: rgba(95, 95, 95, 255);
+    font: normal 15px NazaninBold;
+    line-height: 20px;
+    margin: 8px 0 0 0;
+}
+
+    .WebPlex-FormContainer .WebPlex-Description a,
+    .WebPlex-FormContainer .WebPlex-Description span {
+        color: rgba(138, 183, 1, 255);
+        text-decoration: none;
+    }
+
+    .WebPlex-FormContainer .WebPlex-Description.WebPlex-Secondary {
+        border-top: solid 1px rgba(255, 255, 255, 0.1);
+        color: #ADADAD;
+        font-size: 12px;
+        margin-top: 20px;
+        padding: 2px 8px 2px;
+    }
+
+    .WebPlex-FormContainer .WebPlex-Description .WebPlex-English {
+        font: bold 15px 'Segoe UI';
+    }
+
+.WebPlex-Switch {
+    padding: 2% !important;
+    width: 96% !important;
+}
+
+    .WebPlex-Switch .WebPlex-Inner {
+        position: relative;
+    }
+
+    .WebPlex-Switch .WebPlex-FormLabel {
+        color: rgba(95, 95, 95, 255);
+        cursor: pointer;
+        float: right;
+        line-height: 26px;
+        position: relative;
+        text-align: center;
+        width: 50%;
+        z-index: 2;
+    }
+
+        .WebPlex-Switch .WebPlex-FormLabel:active {
+            margin: 1px 0 -1px;
+        }
+
+    .WebPlex-Switch .WebPlex-FormInput {
+        display: none;
+    }
+
+.WebPlex-FormLabel.WebPlex-Active {
+    color: rgba(255, 255, 255, 255);
+    font-weight: bold;
+    transition: 0.15s ease-out;
+}
+
+.WebPlex-Switch .WebPlex-Selection {
+    background: rgba(100, 100, 100, 0.75);
+    display: block;
+    position: absolute;
+    transition: 0.15s ease-out;
+    z-index: 1;
+}

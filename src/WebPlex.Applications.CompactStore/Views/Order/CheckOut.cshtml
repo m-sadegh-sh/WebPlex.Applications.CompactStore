@@ -1,0 +1,10 @@
+﻿@model CheckOutViewModel
+
+@{
+    Layout = Views.Shared._MinimalLayout_cshtml;
+    ViewBag.Title = Resources.Views_Order_CheckOut_Meta_Title;
+}
+
+<div id="WebPlex-CheckOutContainer" class="WebPlex-BoxContainer WebPlex-Clearfix">
+    @Html.Partial(Views.Order._CheckOut_cshtml, Model)
+</div>

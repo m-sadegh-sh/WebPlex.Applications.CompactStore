@@ -1,0 +1,366 @@
+﻿.WebPlex-MainContainer .WebPlex-ProductsContainer,
+.WebPlex-MainContainer .WebPlex-ProductContainer {
+    background: rgba(245, 245, 245, 255);
+    border: solid 2px rgba(118, 118, 118, 255);
+    box-shadow: 0 2px 1px rgba(190, 190, 190, 255);
+    display: block;
+    margin: 0;
+    padding: 10px 10px 0 0;
+}
+
+.WebPlex-MainContainer .WebPlex-ProductsContainer {
+    margin-bottom: 70px;
+    overflow: initial;
+    position: relative;
+}
+
+.WebPlex-MainContainer .WebPlex-ProductsContainer.WebPlex-Empty {
+    margin-bottom: 0;
+}
+
+.WebPlex-MainContainer .WebPlex-ProductsContainer li {
+    list-style: none;
+}
+
+.WebPlex-MainContainer .WebPlex-ProductsContainer .WebPlex-Empty {
+    color: rgba(95, 95, 95, 255);
+    font: bold 16px NazaninBold;
+    padding: 80px 0 90px 10px;
+    text-align: center;
+}
+
+.WebPlex-MainContainer .WebPlex-Product {
+    border: solid 1px rgba(215, 215, 215, 255);
+    height: 263px;
+    margin: 0 0 10px 10px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    top: -25px;
+    transition: all 0.2s ease;
+    width: 263px;
+}
+
+.WebPlex-MainContainer .WebPlex-Product.WebPlex-Visible {
+    opacity: 1;
+    top: 0;
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-Image,
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-ImagePlaceholder {
+    display: block;
+    height: 214px !important;
+    width: 100% !important;
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-ImagePlaceholder {
+    background: rgba(200, 200, 200, 0.25);
+    color: rgba(0, 0, 0, 0.35);
+    display: table;
+    font: bold 13px Yekan;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-ImagePlaceholder > span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-Placeholder {
+    bottom: 59px;
+    box-shadow: inset 0 0 25px 1px rgba(0, 0, 0, 0.5);
+    left: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-Placeholder.WebPlex-NoImage {
+    box-shadow: inset 0 0 25px 1px rgba(100, 100, 100, 0.5);
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-Overlay {
+    background: rgba(235, 235, 235, 0.95);
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 232px;
+}
+
+.WebPlex-MainContainer .WebPlex-Product:hover .WebPlex-Overlay,
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-Overlay,
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-Overlay .WebPlex-Details {
+    color: rgba(95, 95, 95, 255);
+    font: normal 18px Nazanin;
+}
+
+.WebPlex-MainContainer .WebPlex-Product:hover .WebPlex-Overlay {
+    top: 0;
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-Title {
+    font-family: NazaninBold;
+    height: 31px;
+    line-height: 31px;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-Summary {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 5px;
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-Summary,
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-Actions {
+    opacity: 0;
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-Actions {
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    text-align: left;
+}
+
+.WebPlex-MainContainer .WebPlex-Product *,
+.WebPlex-MainContainer .WebPlex-Product:hover * {
+    transition: all 0.5s ease;
+}
+
+.WebPlex-MainContainer .WebPlex-Product:hover .WebPlex-Summary,
+.WebPlex-MainContainer .WebPlex-Product:hover .WebPlex-Actions {
+    opacity: 1;
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-GoToDetails,
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-AddToCart {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 5px 8px;
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-GoToDetails {
+    background: rgba(101, 186, 0, 255);
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-GoToDetails:hover {
+    background-color: rgba(90, 163, 4, 255);
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-GoToDetails .WebPlex-ViewPort {
+    background: url(../Images/Sprite.png) no-repeat -308px -32px;
+    display: block;
+    height: 18px;
+    overflow: hidden;
+    text-indent: 9999px;
+    width: 18px;
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-AddToCart {
+    background: rgba(245, 108, 2, 255);
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-AddToCart:hover {
+    background-color: rgba(221, 97, 1, 255);
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-AddToCart[disabled] {
+    background-color: rgba(100, 100, 100, 0.5);
+    cursor: not-allowed;
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-AddToCart .WebPlex-ViewPort {
+    background: url(../Images/Sprite.png) no-repeat -326px -32px;
+    display: block;
+    height: 18px;
+    overflow: hidden;
+    text-indent: 9999px;
+    width: 18px;
+}
+
+.WebPlex-MainContainer .WebPlex-Product .WebPlex-UnitPrice {
+    background: rgba(255, 0, 0, 255);
+    color: rgba(245, 245, 245, 255);
+    display: inline-block;
+    padding: 1px 8px;
+}
+
+.WebPlex-MainContainer .WebPlex-LoadMore {
+    bottom: -70px;
+    display: block;
+    opacity: 1;
+    padding: 20px;
+    position: absolute;
+    transition: all 0.2s ease;
+    visibility: visible;
+}
+
+.WebPlex-MainContainer .WebPlex-LoadMore.WebPlex-Removable {
+    bottom: -55px;
+    opacity: 0;
+    visibility: collapse;
+}
+
+.WebPlex-MainContainer .WebPlex-LoadMore,
+.WebPlex-MainContainer .WebPlex-LoadMore a {
+    color: rgba(150, 150, 150, 255);
+    font: normal 19px Nazanin;
+}
+
+.WebPlex-MainContainer .WebPlex-LoadMore .WebPlex-Arrow {
+    background: url(../Images/Sprite.png) no-repeat -370px -12px;
+    display: inline-block;
+    float: right;
+    height: 15px;
+    margin: 6px 0 7px 10px;
+    width: 30px;
+}
+
+.WebPlex-MainContainer .WebPlex-ProductContainer {
+    padding: 10px;
+}
+
+.WebPlex-ProductContainer .WebPlex-SliderContainer {
+    direction: ltr;
+    width: 300px;
+}
+
+.WebPlex-ProductContainer .WebPlex-InnerContainer {
+    display: block;
+    margin: 0 312px 0 0;
+}
+
+.WebPlex-ProductContainer .WebPlex-InnerContainer.WebPlex-NoSlider {
+    margin-right: 0;
+}
+
+.WebPlex-ProductContainer .WebPlex-Title {
+    color: rgba(245, 108, 2, 255);
+    display: block;
+    font: normal 26px Yekan;
+    margin: 0 22px 0 53px;
+    position: relative;
+}
+
+.WebPlex-ProductContainer .WebPlex-Version {
+    background: rgba(245, 108, 2, 255);
+    color: rgba(0, 0, 0, 255);
+    font-size: 16px;
+    margin: 7px 10px;
+    padding: 2px 8px;
+    position: absolute;
+}
+
+.WebPlex-ProductContainer .WebPlex-BackToList {
+    background: url(../Images/Sprite.png) no-repeat -338px 0;
+    height: 30px;
+    margin: 6px 5px 5px 6px;
+    overflow: hidden;
+    text-indent: -999px;
+    width: 32px;
+}
+
+.WebPlex-ProductContainer .WebPlex-Actions {
+    margin: 0 10px 10px 0;
+    width: 170px;
+}
+
+.WebPlex-ProductContainer .WebPlex-Actions .WebPlex-AddToCart,
+.WebPlex-ProductContainer .WebPlex-Actions .WebPlex-UnitPrice {
+    border: solid 2px;
+    display: block;
+    font: bold 15px NazaninBold;
+}
+
+.WebPlex-ProductContainer .WebPlex-Actions .WebPlex-AddToCart {
+    border-color: rgba(245, 108, 2, 255);
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.WebPlex-ProductContainer .WebPlex-Actions .WebPlex-AddToCart[disabled] {
+    border-color: rgba(177, 177, 177, 1);
+    color: rgba(174, 174, 174, 1);
+    cursor: not-allowed;
+}
+
+.WebPlex-ProductContainer .WebPlex-Actions .WebPlex-AddToCart .WebPlex-ViewPort {
+    background: url(../Images/Sprite.png) no-repeat -370px -27px;
+    float: right;
+    height: 22px;
+    margin: 1px 6px 1px 8px;
+    width: 22px;
+}
+
+.WebPlex-ProductContainer .WebPlex-Actions .WebPlex-AddToCart[disabled] .WebPlex-ViewPort {
+    background-position: -392px -27px;
+}
+
+.WebPlex-ProductContainer .WebPlex-Actions .WebPlex-UnitPrice {
+    border-color: rgba(255, 0, 0, 255);
+    padding: 5px;
+    text-align: center;
+}
+
+.WebPlex-ProductContainer .WebPlex-Actions .WebPlex-UnitPrice > span {
+    font-size: 27px;
+    line-height: 19px;
+    position: relative;
+    top: 1px;
+}
+
+.WebPlex-ProductContainer .WebPlex-ScrollableArea {
+    margin-top: 10px;
+    max-height: 430px;
+    padding: 10px;
+    width: 544px;
+}
+
+.WebPlex-ProductContainer .WebPlex-NoSlider .WebPlex-ScrollableArea {
+    width: 826px;
+}
+
+.WebPlex-ProductContainer .WebPlex-ScrollableArea,
+.WebPlex-ProductContainer .WebPlex-ScrollableArea * {
+    color: rgba(95, 95, 95, 255);
+    font: normal 16px Yekan;
+}
+
+.WebPlex-ProductContainer .WebPlex-ScrollableArea .WebPlex-Features {
+    color: rgba(245, 108, 2, 255);
+    font: normal 20px Yekan;
+    margin: 0;
+}
+
+.WebPlex-ProductContainer .WebPlex-ScrollableArea .WebPlex-DescriptionText,
+.WebPlex-ProductContainer .WebPlex-ScrollableArea .WebPlex-FeaturesList {
+    line-height: 22px;
+    margin: 5px 0 20px 0;
+    text-align: justify;
+}
+
+.WebPlex-ProductContainer .WebPlex-ScrollableArea .WebPlex-DescriptionText {
+    margin-top: 0;
+}
+
+.WebPlex-ProductContainer .WebPlex-ScrollableArea .WebPlex-FeaturesList {
+    margin-bottom: 0;
+}
+
+.WebPlex-ProductContainer .WebPlex-ScrollableArea .WebPlex-FeaturesList ul {
+    margin: 0;
+    padding: 0;
+}
+
+.WebPlex-ProductContainer .WebPlex-ScrollableArea .WebPlex-FeaturesList ul li {
+    list-style: decimal inside;
+}

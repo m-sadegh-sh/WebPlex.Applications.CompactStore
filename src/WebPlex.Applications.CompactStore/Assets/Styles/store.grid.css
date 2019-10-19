@@ -1,0 +1,186 @@
+﻿.WebPlex-GridContainer {
+    width: 350px;
+}
+
+.WebPlex-GridContainer .WebPlex-BackToHome,
+.WebPlex-GridContainer .WebPlex-Secondary {
+    display: none;
+}
+
+.WebPlex-GridReversed .WebPlex-GridContainer {
+    width: auto;
+}
+
+.WebPlex-GridReversed .WebPlex-GridContainer .WebPlex-BackToHome,
+.WebPlex-GridReversed .WebPlex-GridContainer .WebPlex-Secondary {
+    display: block;
+}
+
+.WebPlex-GridContainer.WebPlex-Empty * {
+    color: rgba(95, 95, 95, 255);
+}
+
+.WebPlex-GridContainer.WebPlex-Empty .WebPlex-FormContainer {
+    padding: 0;
+}
+
+.WebPlex-GridReversed .WebPlex-GridContainer.WebPlex-Empty {
+    background-color: rgba(255, 255, 255, 255);
+    font: bold 16px NazaninBold;
+    padding: 75px 0 !important;
+}
+
+.WebPlex-GridReversed .WebPlex-GridContainer.WebPlex-Empty .WebPlex-FormContainer {
+    background: inherit;
+    padding: 10px;
+}
+
+.WebPlex-GridContainer.WebPlex-Empty .WebPlex-Title,
+.WebPlex-GridContainer.WebPlex-Empty thead tr,
+.WebPlex-GridContainer.WebPlex-Empty .WebPlex-ButtonStack {
+    display: none !important;
+}
+
+.WebPlex-GridContainer.WebPlex-Empty .WebPlex-FormGroup {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid {
+    border-collapse: collapse;
+    border-spacing: 0;
+    position: relative;
+    width: 100%;
+}
+
+.WebPlex-GridContainer.WebPlex-Empty .WebPlex-Grid {
+    color: rgba(95, 95, 95, 255);
+    margin-bottom: 0;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid th,
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Summaries {
+    background-color: rgba(130, 130, 130, 0.25);
+    font-weight: bold;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid th,
+.WebPlex-GridContainer .WebPlex-Grid td,
+.WebPlex-GridContainer .WebPlex-Grid td * {
+    color: rgba(95, 95, 95, 255);
+    text-align: center;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-ProductTitle {
+    width: 45%;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Count {
+    min-width: 80px;
+    width: 10%;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-UnitPrice {
+    display: none;
+    width: 0;
+}
+
+.WebPlex-GridReversed .WebPlex-GridContainer .WebPlex-Grid .WebPlex-UnitPrice {
+    display: table-cell;
+    width: 15%;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-TotalPrice {
+    width: 35%;
+}
+
+.WebPlex-GridReversed .WebPlex-GridContainer .WebPlex-Grid .WebPlex-TotalPrice {
+    width: 20%;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Count > span {
+    background: rgba(100, 100, 100, 0.5);
+    border: solid 1px rgba(206, 206, 206, 255);
+    color: rgba(255, 255, 255, 255);
+    cursor: default;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 16px;
+    margin: 0 -2px;
+    padding: 3px 6px 1px;
+    position: relative;
+    top: 1px;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Actions {
+    width: 10%;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Count > a,
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Actions > a {
+    background-color: rgba(255, 255, 255, 255);
+    display: inline-block;
+    height: 14px;
+    opacity: 0.6;
+    overflow: hidden;
+    padding: 1px;
+    position: relative;
+    text-indent: -999px;
+    top: 4px;
+    transition: all 0.3s ease;
+    width: 14px;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Count > a:hover,
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Actions > a:hover {
+    opacity: 0.8;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Count > a:active,
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Actions > a:active {
+    opacity: 1;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Count > a[disabled],
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Actions > a[disabled] {
+    cursor: not-allowed;
+    opacity: 0.3;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Count > a.WebPlex-AddToCart {
+    background: url(../Images/Sprite.png) no-repeat -471px 0;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Count > a.WebPlex-RemoveFromCart {
+    background: url(../Images/Sprite.png) no-repeat -471px -16px;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Actions > a.WebPlex-RemoveAllFromCart {
+    background: url(../Images/Sprite.png) no-repeat -471px -32px;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Actions > a.WebPlex-CheckOut {
+    background: url(../Images/Sprite.png) no-repeat -455px -16px;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Actions > a.WebPlex-Track {
+    background: url(../Images/Sprite.png) no-repeat -455px 0;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Actions > a.WebPlex-Cancel {
+    background: url(../Images/Sprite.png) no-repeat -455px -32px;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid tr td,
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Empty {
+    padding: 5px;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Empty {
+    display: block;
+}
+
+.WebPlex-GridContainer .WebPlex-Grid .WebPlex-Empty a {
+    color: rgba(245, 108, 2, 1);
+}

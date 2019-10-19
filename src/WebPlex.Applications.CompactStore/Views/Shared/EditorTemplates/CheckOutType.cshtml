@@ -1,0 +1,7 @@
+﻿@model CheckOutType
+
+@{
+    var selectList = Model.ToSelectList();
+}
+
+@Html.EditorFor(model => selectList)

@@ -1,0 +1,20 @@
+﻿@model ProductListViewModel
+
+@if (Model.Any()) {
+    foreach (var product in Model) {
+        var temp = product;
+
+        @Html.DisplayFor(p => temp)
+    }
+} else {
+    <li class="WebPlex-Empty">
+        @Resources.Views_Product_List_Empty
+    </li>
+}
+
+@if (Model.HasNextPage) {
+    <div class="WebPlex-LoadMore">
+        <span class="WebPlex-Arrow"></span>
+        @Ajax.ActionLink(Resources.Views_Product_List_LoadMore, Model.Category != null ? MVC.Product.ListByCategory(Model.Category.Slug, Model.Query, Model.Order, Model.Direction, Model.NextPage, Model.Size) : MVC.Product.List(Model.Query, Model.Order, Model.Direction, Model.NextPage, Model.Size), Ajax.Options("WebPlex-ItemsPlaceholder", false, "webPlexLoadItemsOnBegin", "webPlexLoadItemsOnSuccess", "webPlexLoadItemsOnFailure", "webPlexLoadItemsOnComplete"))
+    </div>
+}

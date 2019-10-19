@@ -1,0 +1,48 @@
+﻿@model ProductModel
+
+@{
+    var sliderPictures = Model.GetSliderPictures();
+    var hasAnySlider = sliderPictures != null && sliderPictures.Any();
+}
+
+@if (hasAnySlider) {
+    <div class="WebPlex-SliderContainer WebPlex-PullRight">
+        <div id="galleria">
+            @foreach (var sliderPicture in sliderPictures) {
+                <img src="@Url.Action(MVC.Optimization.Image(63, 49, PictureHelpers.ThumbUrlOrDefault(sliderPicture)))"
+                     data-big="@Url.Action(MVC.Optimization.Image(700, 500, PictureHelpers.LargeUrlOrDefault(sliderPicture)))"/>
+            }
+        </div>
+    </div>
+}
+<div class="WebPlex-InnerContainer@(hasAnySlider ? null : " WebPlex-NoSlider")">
+    @Html.ActionLink(Resources.Views_Product_Details_BackToList, MVC.Product.ListByCategory(Model.Category.Slug, null, null, null, null, null), new {
+        @class = "WebPlex-BackToList WebPlex-PullLeft"
+    })
+    <h1 class="WebPlex-Title">
+        @Model.Title
+    </h1>
+    <div class="WebPlex-ScrollableArea WebPlex-Scrollable WebPlex-AutoInitialise">
+        <div class="WebPlex-Actions WebPlex-PullLeft">
+            @Ajax.NormalizedActionLink(Resources.Views_Product_Details_AddToCart, MVC.Cart.Add(Model.Id, Request.RawUrl), Ajax.Options(onBegin: "webPlexAddToCartOnBegin", onSuccess: "webPlexAddToCartOnSuccess", onFailure: "webPlexAddToCartOnFailure", onComplete: "webPlexAddToCartOnComplete"), new {
+                @class = "WebPlex-AddToCart"
+            }).UseContent(@"<span class=""WebPlex-ViewPort""></span>{0}")
+            <div class="WebPlex-UnitPrice">
+                @Html.Raw(Resources.Views_Shared_CurrencyFormat, Model.UnitPrice)
+            </div>
+        </div>
+
+        <p class="WebPlex-DescriptionText">
+            @Html.Raw(Model.Description)
+        </p>
+
+        @if (!string.IsNullOrEmpty(Model.Features)) {
+            <h2 class="WebPlex-Features">
+                @Html.DisplayNameFor(model => model.Features)
+            </h2>
+            <div class="WebPlex-FeaturesList">
+                @Html.Raw(Model.Features)
+            </div>
+        }
+    </div>
+</div>

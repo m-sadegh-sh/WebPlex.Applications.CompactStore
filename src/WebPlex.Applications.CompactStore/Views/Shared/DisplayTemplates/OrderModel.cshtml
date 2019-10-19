@@ -1,0 +1,37 @@
+﻿@model OrderModel
+
+<tr>
+    <td class="WebPlex-SubmitDateUtc">
+        <span>
+            @Html.DisplayFor(model => model.SubmitDateUtc)
+        </span>
+    </td>
+    <td class="WebPlex-TotalPrice">
+        <span>
+            @Html.DisplayFor(model => model.TotalPrice, "Currency.Simple")
+        </span>
+    </td>
+    <td class="WebPlex-Status">
+        <span>
+            @Html.DisplayFor(model => model.Status)
+        </span>
+    </td>
+    <td class="WebPlex-Actions">
+        @if (Model.Status.IsCheckOutRequired()) {
+            @Html.ActionLink(Resources.Views_Shared_DisplayTemplates_OrderModel_CheckOut, MVC.Order.CheckOut(Model.AccessToken), new {
+                @class = "WebPlex-CheckOut",
+                title = Resources.Views_Shared_DisplayTemplates_OrderModel_CheckOut
+            })
+        }
+        @Html.ActionLink(Resources.Views_Shared_DisplayTemplates_OrderModel_Track, MVC.Order.Track(Model.AccessToken), new {
+            @class = "WebPlex-Track",
+            title = Resources.Views_Shared_DisplayTemplates_OrderModel_Track
+        })
+        @if (Model.Status.IsCancellable()) {
+            @Ajax.ActionLink(Resources.Views_Shared_DisplayTemplates_OrderModel_Cancel, MVC.Order.Cancel(Model.AccessToken, Request.Url.PathAndQuery), Ajax.Options(onBegin: "webPlexFormOnBegin", onSuccess: "webPlexFormOnSuccess", onFailure: "webPlexFormOnFailure", onComplete: "webPlexFormOnComplete"), new {
+                @class = "WebPlex-Cancel",
+                title = Resources.Views_Shared_DisplayTemplates_OrderModel_Cancel
+            })
+        }
+    </td>
+</tr>

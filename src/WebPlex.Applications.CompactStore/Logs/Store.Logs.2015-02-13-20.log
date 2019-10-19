@@ -1,0 +1,3 @@
+2/13/2015 8:54:58 PM	A potentially dangerous Request.Path value was detected from the client (:).	   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)	System.Web2/13/2015 8:54:58 PM	A potentially dangerous Request.Path value was detected from the client (:).	   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)	System.Web

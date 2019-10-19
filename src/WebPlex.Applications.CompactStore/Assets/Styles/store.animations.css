@@ -1,0 +1,29 @@
+﻿@-webkit-keyframes goToUp {
+    0%,
+    100% {
+        top: 0;
+    }
+
+    50% {
+        top: -23px;
+    }
+
+    51% {
+        top: 23px;
+    }
+}
+
+@-webkit-keyframes goToBottom {
+    0%,
+    100% {
+        top: 0;
+    }
+
+    50% {
+        top: 23px;
+    }
+
+    51% {
+        top: -23px;
+    }
+}

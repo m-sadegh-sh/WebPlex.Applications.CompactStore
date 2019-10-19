@@ -1,0 +1,16 @@
+﻿@model ProductModel
+
+@{
+    ViewBag.Title = Model.Category.Title + Resources.Views_Shared_TitleSeparator + Model.Title;
+    ViewBag.Keywords = Model.Category.MetaKeywords + Resources.Views_Shared_KeywordSeparator + Model.MetaKeywords;
+    ViewBag.Description = Model.MetaDescription;
+}
+
+<div class="WebPlex-ProductContainer WebPlex-Clearfix@(!string.IsNullOrEmpty(Model.Category.CssClass) ? string.Format(" WebPlex-{0}", Model.Category.CssClass) : null)">
+    @Html.Partial(Views.Product._Details_cshtml, Model)
+</div>
+
+@section InlineScripts {
+    @Scripts.Render("~/Assets/Scripts/Galleria")
+    @Scripts.Render("~/Assets/Scripts/jQuery-Scrolling")
+}

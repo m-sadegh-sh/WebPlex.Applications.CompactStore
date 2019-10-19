@@ -1,0 +1,194 @@
+﻿#galleria {
+    bottom: -40px;
+    opacity: 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+#galleria.Parnian-Loaded {
+    bottom: 0;
+    opacity: 1;
+}
+
+#galleria .fullscreen {
+    background: rgba(0, 0, 0, 0.35) url(../Images/BackgroundPattern.png) repeat;
+}
+
+#galleria-loader {
+    height: 1px !important;
+}
+
+.galleria-theme-classic {
+    overflow: hidden;
+    position: relative;
+}
+
+.galleria-theme-classic img {
+    -moz-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.galleria-theme-classic img:hover {
+    cursor: pointer;
+}
+
+.galleria-theme-classic .galleria-stage {
+    border: solid 6px #F56D01;
+    bottom: 69px;
+    left: 2px;
+    overflow: hidden;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+}
+
+.galleria-theme-classic .galleria-thumbnails-container {
+    bottom: 14px;
+    height: 54px;
+    left: 2px;
+    position: absolute;
+    right: 2px;
+    z-index: 2;
+}
+
+.galleria-theme-classic .galleria-thumbnails .galleria-image {
+    border: solid 3px transparent;
+    cursor: pointer;
+    float: left;
+    margin-right: 5px;
+    padding: 1px;
+}
+
+.galleria-theme-classic .galleria-thumbnails .galleria-image.active {
+    border-color: rgba(245, 109, 1, 255);
+}
+
+.galleria-theme-classic .galleria-thumbnails .galleria-image:last-child {
+    margin-right: 0;
+}
+
+.galleria-theme-classic .galleria-thumbnails .galleria-image {
+    height: 47px !important;
+    width: 61px !important;
+}
+
+.galleria-theme-classic .galleria-thumbnails .galleria-image img {
+    border: solid 1px rgba(255, 255, 255, 255);
+    height: 47px !important;
+    width: 61px !important;
+}
+
+.galleria-theme-classic .galleria-counter {
+    display: none;
+}
+
+.galleria-theme-classic .galleria-loader {
+    background: url(../Images/Loader.gif) no-repeat 2px 2px;
+    display: none;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 20px;
+    z-index: 2;
+}
+
+.galleria-theme-classic .galleria-info {
+    display: block !important;
+    left: 15px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 2;
+}
+
+.galleria-theme-classic .galleria-image-nav {
+    height: 62px;
+    left: 0;
+    margin-top: -62px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.galleria-theme-classic .galleria-image-nav-left,
+.galleria-theme-classic .galleria-image-nav-right {
+    cursor: pointer;
+    filter: alpha(opacity=30);
+    opacity: .3;
+    position: absolute;
+    z-index: 2;
+}
+
+.galleria-theme-classic .galleria-image-nav-right {
+    left: 10px;
+}
+
+.galleria-theme-classic .galleria-image-nav-left {
+    right: 10px;
+}
+
+.galleria-theme-classic .galleria-image-nav-right .WebPlex-ViewPort,
+.galleria-theme-classic .galleria-image-nav-left .WebPlex-ViewPort {
+    display: block;
+    height: 22px;
+    margin: 51px 20px;
+    width: 22px;
+}
+
+.galleria-theme-classic .galleria-image-nav-right .WebPlex-ViewPort {
+    background-position: -196px -47px;
+}
+
+.galleria-theme-classic .galleria-image-nav-left .WebPlex-ViewPort {
+    background-position: -218px -47px;
+}
+
+.galleria-theme-classic .galleria-image-nav-right:hover .WebPlex-ViewPort {
+    background-position: -196px -47px;
+}
+
+.galleria-theme-classic .galleria-image-nav-left:hover .WebPlex-ViewPort {
+    background-position: -218px -47px;
+}
+
+.galleria-theme-classic.notouch .galleria-image-nav-left:hover,
+.galleria-theme-classic.notouch .galleria-image-nav-right:hover,
+.galleria-theme-classic.touch .galleria-image-nav-left:active,
+.galleria-theme-classic.touch .galleria-image-nav-right:active {
+    opacity: 1;
+}
+
+.galleria-theme-classic .galleria-thumbnails-container .disabled {
+    cursor: default;
+    opacity: .2;
+}
+
+.galleria-theme-classic .galleria-image-nav-left .WebPlex-ViewPort,
+.galleria-theme-classic .galleria-image-nav-right .WebPlex-ViewPort,
+.galleria-theme-classic .galleria-fullscreen {
+    background-image: url(../Images/Sprite.png);
+    background-repeat: no-repeat;
+}
+
+.galleria-theme-classic .galleria-fullscreen {
+    background-position: -284px -47px;
+    cursor: pointer;
+    height: 22px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 22px;
+    z-index: 4;
+}
+
+.galleria-theme-classic .galleria-fullscreen:hover {
+    background-position: -306px -50px;
+}
+
+.galleria-errors {
+    display: none;
+}

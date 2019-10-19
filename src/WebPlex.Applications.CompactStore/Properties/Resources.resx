@@ -1,0 +1,978 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error_AlreadyAdded" xml:space="preserve">
+    <value>این محصول در سبد خرید وجود دارد.</value>
+  </data>
+  <data name="Error_AlreadyLoggedIn" xml:space="preserve">
+    <value>شما قبلا به حساب کاربری خود وارد شده اید!</value>
+  </data>
+  <data name="Error_CartIsEmpty" xml:space="preserve">
+    <value>سبد خرید شما خالی می باشد.</value>
+  </data>
+  <data name="Error_LoginRequired" xml:space="preserve">
+    <value>لطفا ابتدا وارد حساب کاربری خود را شوید.</value>
+  </data>
+  <data name="Error_NotFound_Category" xml:space="preserve">
+    <value>دسته بندی مورد نظر وجود ندارد.</value>
+  </data>
+  <data name="Error_NotFound_Customer" xml:space="preserve">
+    <value>مشتری با این مشتخصات پیدا نشد.</value>
+  </data>
+  <data name="Error_NotFound_Order" xml:space="preserve">
+    <value>سفارش مورد نظر وجود ندارد.</value>
+  </data>
+  <data name="Error_NotFound_Product" xml:space="preserve">
+    <value>محصول مورد نظر وجود ندارد.</value>
+  </data>
+  <data name="Members_CartItem_Count" xml:space="preserve">
+    <value>تعداد</value>
+  </data>
+  <data name="Members_CartItem_ProductTitle" xml:space="preserve">
+    <value>نام محصول</value>
+  </data>
+  <data name="Members_CartItem_UnitPrice" xml:space="preserve">
+    <value>قیمت واحد</value>
+  </data>
+  <data name="Members_Customer_CellPhone" xml:space="preserve">
+    <value>شماره همراه</value>
+  </data>
+  <data name="Members_Customer_Email" xml:space="preserve">
+    <value>ایمیل</value>
+  </data>
+  <data name="Members_Customer_Email_Placeholder" xml:space="preserve">
+    <value>(info@company.com) ایمیل</value>
+  </data>
+  <data name="Members_Customer_FirstName" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Members_Customer_LastName" xml:space="preserve">
+    <value>نام خانوادگی</value>
+  </data>
+  <data name="Members_Customer_Phone_Placeholder" xml:space="preserve">
+    <value>(09...) شماره تماس</value>
+  </data>
+  <data name="Members_OrderComplaint_Message" xml:space="preserve">
+    <value>متن اعتراض</value>
+  </data>
+  <data name="Members_OrderComplaint_Order" xml:space="preserve">
+    <value>سفارش</value>
+  </data>
+  <data name="Members_OrderComplaint_Priority" xml:space="preserve">
+    <value>درجه اهمیت</value>
+  </data>
+  <data name="Members_Order_Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Members_Order_SubmitDateUtc" xml:space="preserve">
+    <value>تاریخ ثبت</value>
+  </data>
+  <data name="Members_Order_TotalPrice" xml:space="preserve">
+    <value>هزینه قابل پرداخت</value>
+  </data>
+  <data name="Members_SortDirection_Ascending" xml:space="preserve">
+    <value>صعودی</value>
+  </data>
+  <data name="Members_SortDirection_Descending" xml:space="preserve">
+    <value>نزولی</value>
+  </data>
+  <data name="Members_SortOrder_Default" xml:space="preserve">
+    <value>هوشمند</value>
+  </data>
+  <data name="Members_SortOrder_ReleaseDateUtc" xml:space="preserve">
+    <value>تاریخ عرضه</value>
+  </data>
+  <data name="Members_SortOrder_UnitPrice" xml:space="preserve">
+    <value>قیمت محصول</value>
+  </data>
+  <data name="PrettySize_Bytes" xml:space="preserve">
+    <value>0.00 بایت</value>
+  </data>
+  <data name="PrettySize_Gigabyte" xml:space="preserve">
+    <value>0.00 گیگابایت</value>
+  </data>
+  <data name="PrettySize_Kilobyte" xml:space="preserve">
+    <value>0.00 کیلوبایت</value>
+  </data>
+  <data name="PrettySize_Megabyte" xml:space="preserve">
+    <value>0.00 مگابایت</value>
+  </data>
+  <data name="PrettySize_Terabyte" xml:space="preserve">
+    <value>0.00 ترابایت</value>
+  </data>
+  <data name="PrettyTime_AMinAgo" xml:space="preserve">
+    <value>یه دقیقه پیش</value>
+  </data>
+  <data name="PrettyTime_LastMonth" xml:space="preserve">
+    <value>ماه گذشته</value>
+  </data>
+  <data name="PrettyTime_LastWeek" xml:space="preserve">
+    <value>هفته گذشته</value>
+  </data>
+  <data name="PrettyTime_LastYear" xml:space="preserve">
+    <value>سال گذشته</value>
+  </data>
+  <data name="PrettyTime_NDaysAgo" xml:space="preserve">
+    <value>{0} روز قبل</value>
+  </data>
+  <data name="PrettyTime_NHourAgo" xml:space="preserve">
+    <value>{0} ساعت پیش</value>
+  </data>
+  <data name="PrettyTime_NMinAgo" xml:space="preserve">
+    <value>{0} دقیقه پیش</value>
+  </data>
+  <data name="PrettyTime_NMonthAgo" xml:space="preserve">
+    <value>{0} ماه پیش</value>
+  </data>
+  <data name="PrettyTime_Now" xml:space="preserve">
+    <value>همین الان</value>
+  </data>
+  <data name="PrettyTime_NSecAgo" xml:space="preserve">
+    <value>{0} ثانیه پیش</value>
+  </data>
+  <data name="PrettyTime_NYearAgo" xml:space="preserve">
+    <value>{0} سال قبل</value>
+  </data>
+  <data name="PrettyTime_ThreeWeekAgo" xml:space="preserve">
+    <value>سه هفته پیش</value>
+  </data>
+  <data name="PrettyTime_TwoWeekAgo" xml:space="preserve">
+    <value>دو هفته پیش</value>
+  </data>
+  <data name="PrettyTime_Yesterday" xml:space="preserve">
+    <value>دیروز</value>
+  </data>
+  <data name="Success_AddedToCart" xml:space="preserve">
+    <value>محصول انتخابی به سبد خرید افزوده گردید.</value>
+  </data>
+  <data name="Success_LoggedIn" xml:space="preserve">
+    <value>شما با موفقیت وارد حساب کاربری خود شده‌اید...</value>
+  </data>
+  <data name="Success_LoggedOut" xml:space="preserve">
+    <value>شما با موفقیت از حساب کاربری خود خارج شده‌اید...</value>
+  </data>
+  <data name="Success_OrderSubmitted" xml:space="preserve">
+    <value>سفارش شما با موفقیت ثبت شد.</value>
+  </data>
+  <data name="Success_ProfileUpdated" xml:space="preserve">
+    <value>اطلاعات حساب کاربری شما بروز شد.</value>
+  </data>
+  <data name="Success_Registered" xml:space="preserve">
+    <value>ثبت نام با موفقیت انجام پذیرفت و وارد حساب کاربری خود شده اید.</value>
+  </data>
+  <data name="Success_RemovedFromCart" xml:space="preserve">
+    <value>محصول انتخابی از سبد خرید خذف شد.</value>
+  </data>
+  <data name="Validation_Duplicate" xml:space="preserve">
+    <value>{0} وارد شده تکراری می باشد.</value>
+  </data>
+  <data name="Validation_InvalidCredentials" xml:space="preserve">
+    <value>مشخصات وارد شده صحیح نمی باشد.</value>
+  </data>
+  <data name="Validation_InvalidEmail" xml:space="preserve">
+    <value>لطفا یک ایمیل معتبر وارد نمائید.</value>
+  </data>
+  <data name="Validation_InvalidPhone" xml:space="preserve">
+    <value>لطفا یک شماره معتبر وارد نمائید.</value>
+  </data>
+  <data name="Validation_Required" xml:space="preserve">
+    <value>"{0}" اجباری می باشد.</value>
+  </data>
+  <data name="Views_Account_Login_Description" xml:space="preserve">
+    <value>در صورتی که قبلا از هایپرمارکت سون خرید داشته اید شماره همراه و کلمه عبور خود را در فرم مقابل وارد کرده و کلید &lt;span class="WebPlex-English"&gt;Enter&lt;/span&gt; را بزنید.</value>
+  </data>
+  <data name="Views_Account_Login_FormTitle" xml:space="preserve">
+    <value>مشتری گرامی</value>
+  </data>
+  <data name="Views_Account_Login_Login" xml:space="preserve">
+    <value>وارد شو</value>
+  </data>
+  <data name="Views_Account_Login_Meta_Title" xml:space="preserve">
+    <value>ورود به حساب کاربری</value>
+  </data>
+  <data name="Views_Account_Login_Register" xml:space="preserve">
+    <value>ثبت نام کنید...</value>
+  </data>
+  <data name="Views_Account_Register_Description" xml:space="preserve">
+    <value>در صورتی که بتازگی می خواهید به جمع مشتریان هایپرمارکت سون بپیوندید فرم مقابل را با دقت و بصورت کامل تکمیل کرده در جعبه های مقابل وارد کرده و کلید &lt;span class="WebPlex-English"&gt;Enter&lt;/span&gt; را بزنید.</value>
+  </data>
+  <data name="Views_Account_Register_FormTitle" xml:space="preserve">
+    <value>مشتری گرامی</value>
+  </data>
+  <data name="Views_Account_Register_Login" xml:space="preserve">
+    <value>ورود به حساب کاربری...</value>
+  </data>
+  <data name="Views_Account_Register_Meta_Title" xml:space="preserve">
+    <value>ثبت نام</value>
+  </data>
+  <data name="Views_Account_Register_Register" xml:space="preserve">
+    <value>ثبت نام کن</value>
+  </data>
+  <data name="Views_Account_UpdateProfile_Description" xml:space="preserve">
+    <value>بمنظور بروز رسانی اطلاعات حساب کاربری خود، فرم مقابل را با دقت  ویرایش کرده و کلید &lt;span class="WebPlex-English"&gt;Enter&lt;/span&gt; را بزنید.</value>
+  </data>
+  <data name="Views_Account_UpdateProfile_FormTitle" xml:space="preserve">
+    <value>مشتری گرامی</value>
+  </data>
+  <data name="Views_Account_UpdateProfile_Meta_Title" xml:space="preserve">
+    <value>ویرایش پروفایل</value>
+  </data>
+  <data name="Views_Account_UpdateProfile_UpdateProfile" xml:space="preserve">
+    <value>بروز رسانی پروفایل</value>
+  </data>
+  <data name="Views_BackToHome" xml:space="preserve">
+    <value>برگشت به صفحه اصلی</value>
+  </data>
+  <data name="Views_BackToOrders" xml:space="preserve">
+    <value>برگشت به لیست سفارشات</value>
+  </data>
+  <data name="Views_Cart_Form_FormTitle" xml:space="preserve">
+    <value>سبد خرید</value>
+  </data>
+  <data name="Views_Cart_Form_Empty" xml:space="preserve">
+    <value>سبد خرید شما خالی می باشد.</value>
+  </data>
+  <data name="Views_Cart_Form_Meta_Title" xml:space="preserve">
+    <value>سبد خرید شما</value>
+  </data>
+  <data name="Views_Cart_Form_Actions" xml:space="preserve">
+    <value>عملیات</value>
+  </data>
+  <data name="Views_Cart_Form_SubmitOrder" xml:space="preserve">
+    <value>ثبت سفارش</value>
+  </data>
+  <data name="Views_Home_Index_Meta_Title" xml:space="preserve">
+    <value>خانه</value>
+  </data>
+  <data name="Views_Order_CheckOut_Continue" xml:space="preserve">
+    <value>ادامه</value>
+  </data>
+  <data name="Views_Order_CheckOut_Order_Description" xml:space="preserve">
+    <value>اطلاعات سفارش شما در این فرم آورده شده است. برای تکمیل خرید خود ابتدا نحوه پرداخت مبلغ سفارش را مشخص کرده و سپس کلید &lt;span class="WebPlex-English"&gt;Enter&lt;/span&gt; را بزنید.</value>
+  </data>
+  <data name="Views_Order_CheckOut_FormTitle" xml:space="preserve">
+    <value>مشتری گرامی</value>
+  </data>
+  <data name="Views_Order_CheckOut_Meta_Title" xml:space="preserve">
+    <value>پرداخت سفارش</value>
+  </data>
+  <data name="Views_Order_List_Empty" xml:space="preserve">
+    <value>شما تا به حال سفارشی ثبت نکرده اید. در صورت تمایل از &lt;a href="{0}"&gt;اینجا&lt;/a&gt; شروع کنید.</value>
+  </data>
+  <data name="Views_Order_List_Meta_Title" xml:space="preserve">
+    <value>سفارشات من</value>
+  </data>
+  <data name="Views_Order_List_Orders" xml:space="preserve">
+    <value>خرید های من</value>
+  </data>
+  <data name="Views_Order_Track_Order_Description" xml:space="preserve">
+    <value>اطلاعات سفارش شما در این فرم آورده شده است. در صورتی که در روند رسیدگی به سفارش شما مشکلی وجود دارد؛ بعنوان مثال پس از گذشت زمان، هنوز وضعیت آن تغییری نکرده است؛ می توانید اقدام به ثبت شکایت نمائید تا مدیران هایپر سون را از این موضوع مطلع نمائید. برای این کار فرم ذیل را پر کرده و سپس کلید &lt;span class="WebPlex-English"&gt;Enter&lt;/span&gt; را بزنید.</value>
+  </data>
+  <data name="Views_Order_Track_FormTitle" xml:space="preserve">
+    <value>مشتری گرامی</value>
+  </data>
+  <data name="Views_Order_Track_Meta_Title" xml:space="preserve">
+    <value>وضعیت سفارش</value>
+  </data>
+  <data name="Views_Order_Track_SubmitComplaint" xml:space="preserve">
+    <value>ثبت شکایت</value>
+  </data>
+  <data name="Views_Product_Details_AddToCart" xml:space="preserve">
+    <value>افزودن به سبد خرید</value>
+  </data>
+  <data name="Views_Product_Details_BackToList" xml:space="preserve">
+    <value>برگشت به لیست</value>
+  </data>
+  <data name="Views_Product_List_Empty" xml:space="preserve">
+    <value>محصولی برای نمایش پیدا نشد.</value>
+  </data>
+  <data name="Views_Product_List_LoadMore" xml:space="preserve">
+    <value>نمایش گزینه های بیشتر</value>
+  </data>
+  <data name="Views_Product_List_Meta_Title" xml:space="preserve">
+    <value>محصولات</value>
+  </data>
+  <data name="Views_Shared_Aside_All" xml:space="preserve">
+    <value>همه</value>
+  </data>
+  <data name="Views_Shared_Aside_Search" xml:space="preserve">
+    <value>جستجو</value>
+  </data>
+  <data name="Views_Shared_Aside_SortGroup" xml:space="preserve">
+    <value>مرتب سازی بر اساس</value>
+  </data>
+  <data name="Views_Shared_CurrencyFormat" xml:space="preserve">
+    <value>&lt;span&gt;{0:###,###}&lt;/span&gt; ریال</value>
+  </data>
+  <data name="Views_Shared_CurrencyFormatSimple" xml:space="preserve">
+    <value>{0:###,###}</value>
+  </data>
+  <data name="Views_Shared_DefaultLayout_Description" xml:space="preserve">
+    <value>هایپرمارکت سون، بزرگترین هایپرمارکت اینترنتی در ایران</value>
+  </data>
+  <data name="Views_Shared_DefaultLayout_FailureMessage" xml:space="preserve">
+    <value>خطایی رخ داده است. لطفا مجددا تلاش کنید...</value>
+  </data>
+  <data name="Views_Shared_DefaultLayout_Keywords" xml:space="preserve">
+    <value>هایپرمارکت سون, هایپر, مارکت, هایپرمارکت, سون، 7Hyper, 7Market</value>
+  </data>
+  <data name="Views_Shared_DefaultLayout_Navbar_Home" xml:space="preserve">
+    <value>هایپرمارکت سون - 7hyper.ir</value>
+  </data>
+  <data name="Views_Shared_DefaultLayout_SuccessMessage" xml:space="preserve">
+    <value>عملیات مورد نظر با موفقیت انجام شد.</value>
+  </data>
+  <data name="Views_Shared_DefaultLayout_Title" xml:space="preserve">
+    <value>هایپرمارکت ســـــــون</value>
+  </data>
+  <data name="Views_Shared_DefaultLayout_WaitMessage" xml:space="preserve">
+    <value>لطفا صبر کنید...</value>
+  </data>
+  <data name="Views_Shared_DisplayTemplates_CartItemModel_RemoveFromCart" xml:space="preserve">
+    <value>کاهش تعداد</value>
+  </data>
+  <data name="Views_Shared_DisplayTemplates_OrderModel_Summary_Title" xml:space="preserve">
+    <value>سفارش شماره {0} ({1})</value>
+  </data>
+  <data name="Views_Shared_DisplayTemplates_ProductModel_AddToCart" xml:space="preserve">
+    <value>افزودن به سبد خرید</value>
+  </data>
+  <data name="Views_Shared_DisplayTemplates_ProductModel_DefaultImage" xml:space="preserve">
+    <value>تصویری برای نمایش پیدا نشد :(</value>
+  </data>
+  <data name="Views_Shared_DisplayTemplates_ProductModel_Details" xml:space="preserve">
+    <value>جزئیات محصول</value>
+  </data>
+  <data name="Views_Shared_Error_500_Description" xml:space="preserve">
+    <value>در صورت بروز مجدد خطا پس از تلاش مجدد، لطفا از طریق صفحه تماس با ما این موضوع را به ما اطلاع دهید.</value>
+  </data>
+  <data name="Views_Shared_Error_500_Meta_Title" xml:space="preserve">
+    <value>وقوع یک خطای غیر منتظره...</value>
+  </data>
+  <data name="Views_Shared_Error_500_Title" xml:space="preserve">
+    <value>یک خطای غیر منتظره رخ داده است :(</value>
+  </data>
+  <data name="Views_Shared_Footer_PoweredBy" xml:space="preserve">
+    <value>Powered by</value>
+  </data>
+  <data name="Views_Shared_Footer_WebPlex" xml:space="preserve">
+    <value>WebPlex</value>
+  </data>
+  <data name="Views_Shared_KeywordSeparator" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="Views_Shared_MainNav_RemoveCategory" xml:space="preserve">
+    <value>حذف دسته بندی</value>
+  </data>
+  <data name="Views_Shared_TitleSeparator" xml:space="preserve">
+    <value> - </value>
+  </data>
+  <data name="Views_Shared_TopLeft_Login" xml:space="preserve">
+    <value>ورود</value>
+  </data>
+  <data name="Views_Shared_TopLeft_Logout" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="Views_Shared_TopLeft_MyProfile" xml:space="preserve">
+    <value>حساب من</value>
+  </data>
+  <data name="Views_Shared_TopLeft_Orders" xml:space="preserve">
+    <value>سفارشات من &lt;span&gt;{0}&lt;/span&gt;</value>
+  </data>
+  <data name="Views_Shared_TopLeft_Register" xml:space="preserve">
+    <value>ثبت نام</value>
+  </data>
+  <data name="Views_Shared_TopLeft_UpdateProfile" xml:space="preserve">
+    <value>بروز رسانی پروفایل</value>
+  </data>
+  <data name="Views_Shared_TopLeft_Welcome" xml:space="preserve">
+    <value>{0} عزیز سلام!</value>
+  </data>
+  <data name="Views_Shared_TopLeft_YourCart" xml:space="preserve">
+    <value>سبد خرید شما</value>
+  </data>
+  <data name="Views_Shared_TopRight_ContactUs" xml:space="preserve">
+    <value>ارتباط با ما</value>
+  </data>
+  <data name="Views_Shared_TopRight_Home" xml:space="preserve">
+    <value>صفحه اصلی</value>
+  </data>
+  <data name="Members_OrderComplaint_CheckDateUtc" xml:space="preserve">
+    <value>تاریخ بررسی</value>
+  </data>
+  <data name="Members_OrderComplaint_Reply" xml:space="preserve">
+    <value>پاسخ</value>
+  </data>
+  <data name="Members_OrderComplaint_Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Members_OrderComplaint_SubmitDateUtc" xml:space="preserve">
+    <value>تاریخ ارسال</value>
+  </data>
+  <data name="Members_ChangeFrequency_Always" xml:space="preserve">
+    <value>همیشه</value>
+  </data>
+  <data name="Members_ChangeFrequency_Daily" xml:space="preserve">
+    <value>روزانه</value>
+  </data>
+  <data name="Members_ChangeFrequency_Hourly" xml:space="preserve">
+    <value>هر ساعت</value>
+  </data>
+  <data name="Members_ChangeFrequency_Monthly" xml:space="preserve">
+    <value>ماهانه</value>
+  </data>
+  <data name="Members_ChangeFrequency_Never" xml:space="preserve">
+    <value>همیشه ثابت</value>
+  </data>
+  <data name="Members_ChangeFrequency_Weekly" xml:space="preserve">
+    <value>هر هفته</value>
+  </data>
+  <data name="Members_ChangeFrequency_Yearly" xml:space="preserve">
+    <value>سالانه</value>
+  </data>
+  <data name="Members_OrderLine_Count" xml:space="preserve">
+    <value>تعداد اقلام</value>
+  </data>
+  <data name="Members_OrderLine_Id" xml:space="preserve">
+    <value>شناسه</value>
+  </data>
+  <data name="Members_OrderLine_Order" xml:space="preserve">
+    <value>سفارش</value>
+  </data>
+  <data name="Members_OrderLine_Product" xml:space="preserve">
+    <value>محصول</value>
+  </data>
+  <data name="Members_Order_AccessToken" xml:space="preserve">
+    <value>شناسه سفارش</value>
+  </data>
+  <data name="Members_Order_Customer" xml:space="preserve">
+    <value>مشتری</value>
+  </data>
+  <data name="Members_DbBase_Id" xml:space="preserve">
+    <value>شناسه</value>
+  </data>
+  <data name="Members_Order_IpAddress" xml:space="preserve">
+    <value>آی پی مشتری</value>
+  </data>
+  <data name="Members_Product_AddedToCartCount" xml:space="preserve">
+    <value>تعداد دفعات افزوده شده به سبد خرید</value>
+  </data>
+  <data name="Members_Product_Category" xml:space="preserve">
+    <value>دسته بندی</value>
+  </data>
+  <data name="Members_Product_Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="Members_Product_Features" xml:space="preserve">
+    <value>ویژگی ها</value>
+  </data>
+  <data name="Members_Product_LastModifiedDateUtc" xml:space="preserve">
+    <value>تاریخ آخرین ویرایش</value>
+  </data>
+  <data name="Members_Product_MetaDescription" xml:space="preserve">
+    <value>توضیحات (SEO)</value>
+  </data>
+  <data name="Members_Product_MetaKeywords" xml:space="preserve">
+    <value>کلمات کلیدی (SEO)</value>
+  </data>
+  <data name="Members_Product_ReleaseDateUtc" xml:space="preserve">
+    <value>تاریخ عرضه</value>
+  </data>
+  <data name="Members_Product_Slug" xml:space="preserve">
+    <value>نامک</value>
+  </data>
+  <data name="Members_Product_Summary" xml:space="preserve">
+    <value>توضیحات (اختصاری)</value>
+  </data>
+  <data name="Members_Product_Title" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="Members_Product_UnitPrice" xml:space="preserve">
+    <value>قیمت</value>
+  </data>
+  <data name="Members_Product_ViewsCount" xml:space="preserve">
+    <value>تعداد بازدید</value>
+  </data>
+  <data name="Validation_InvalidLength" xml:space="preserve">
+    <value>{0} حداکثر {1} کاراکتر باید طول داشته باشه.</value>
+  </data>
+  <data name="Members_CartItem_Title" xml:space="preserve">
+    <value>محصول</value>
+  </data>
+  <data name="Members_CartItem_TotalPrice" xml:space="preserve">
+    <value>مجموع قیمت</value>
+  </data>
+  <data name="Members_Category_CssClass" xml:space="preserve">
+    <value>کلاس استایل</value>
+  </data>
+  <data name="Members_Category_DisplayOrder" xml:space="preserve">
+    <value>ترتیب نمایش</value>
+  </data>
+  <data name="Members_Category_MetaDescription" xml:space="preserve">
+    <value>توضیحات (SEO)</value>
+  </data>
+  <data name="Members_Category_MetaKeywords" xml:space="preserve">
+    <value>کلمات کلیدی (SEO)</value>
+  </data>
+  <data name="Members_Category_Parent" xml:space="preserve">
+    <value>والد</value>
+  </data>
+  <data name="Members_Category_Slug" xml:space="preserve">
+    <value>نامک</value>
+  </data>
+  <data name="Members_Category_Title" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="Members_ChangePassword_CurrentPassword" xml:space="preserve">
+    <value>کلمه عبور فعلی</value>
+  </data>
+  <data name="Members_ChangePasswordBase_NewPassword" xml:space="preserve">
+    <value>کلمه عبور جدید</value>
+  </data>
+  <data name="Members_ChangePasswordBase_NewPasswordConfirmation" xml:space="preserve">
+    <value>تائید کلمه عبور</value>
+  </data>
+  <data name="Success_PasswordChanged" xml:space="preserve">
+    <value>کلمه عبور شما با موفقیت تغییر کرد.</value>
+  </data>
+  <data name="Views_Account_ChangePassword_ChangePassword" xml:space="preserve">
+    <value>تغییر کلمه عبور</value>
+  </data>
+  <data name="Views_Account_ChangePassword_Description" xml:space="preserve">
+    <value>برای امنیت بیشتر پیشنهاد می شود در بازه های زمانی مختلف کلمه عبور خود را تغییر دهید.  برای اینکار، فرم مقابل را به دقت تکمیل کرده و کلید &lt;span class="WebPlex-English"&gt;Enter&lt;/span&gt; را بزنید.</value>
+  </data>
+  <data name="Views_Account_ChangePassword_FormTitle" xml:space="preserve">
+    <value>مشتری گرامی</value>
+  </data>
+  <data name="Views_Account_ChangePassword_Meta_Title" xml:space="preserve">
+    <value>تغییر کلمه عبور</value>
+  </data>
+  <data name="Validation_UnMatched" xml:space="preserve">
+    <value>باید با "{1}" باید یکسان باشد.</value>
+  </data>
+  <data name="Validation_CurrentPasswordIsWrong" xml:space="preserve">
+    <value>کلمه عبور فعلی صحیح نمی باشد.</value>
+  </data>
+  <data name="Views_Shared_TopLeft_ChangePassword" xml:space="preserve">
+    <value>تغییر کلمه عبور</value>
+  </data>
+  <data name="Views_Home_Error_FormTitle" xml:space="preserve">
+    <value>واقعا متاسفیم...</value>
+  </data>
+  <data name="Error_Error_403" xml:space="preserve">
+    <value>شیطونی نکن!</value>
+  </data>
+  <data name="Error_Error_403Description" xml:space="preserve">
+    <value>هر چند به چهره‌ت نمیخوره ولی یا شیطونی کردی یا می خوای بکنی؛ نکن برادر/خواهر من نکن!</value>
+  </data>
+  <data name="Error_Error_404" xml:space="preserve">
+    <value>گشتیم نبود...</value>
+  </data>
+  <data name="Error_Error_404Description" xml:space="preserve">
+    <value>اون چیزی که دنبالشین مثل اینکه وجود خارجی نداره؛ یا شایدم فعلا در دسترس نیست! اگر اینطور نیست لطفا باهامون تماس بگیرید.</value>
+  </data>
+  <data name="Error_Error_500" xml:space="preserve">
+    <value>اوخخخ!</value>
+  </data>
+  <data name="Error_Error_500Description" xml:space="preserve">
+    <value>مثل اینکه نرم افزار ما نمی تونه درخواستتون رو پردازش کنه :( اما نگران نباشید ما همه اون چیزی که قراره توی رفع این نقص کمک کنه رو ذخیره کردیم. حالا درخواست می کنیم که لطفا دوباره تلاش کنید.</value>
+  </data>
+  <data name="Views_Error_Contact" xml:space="preserve">
+    <value>تماس با ما</value>
+  </data>
+  <data name="Common_No" xml:space="preserve">
+    <value>خیر</value>
+  </data>
+  <data name="Common_Yes" xml:space="preserve">
+    <value>بلی</value>
+  </data>
+  <data name="Views_Order_CheckOut_Payment_Description" xml:space="preserve">
+    <value>آیا تمایل به پرداخت هزینه سفارش به چه نحوی را دارید؟&lt;br/&gt;&lt;br/&gt;&lt;span&gt;راهنما:&lt;/span&gt; با توجه به اینکه شما قبلا خرید موفق از سون هایپر داشته اید، این امکان را دارید تا مبلغ سفارش خود را پس از دریافت آن، به مامور پست تحویل دهید. اما همچنان امکان پرداخت آنلاین مبلغ سفارش برای شما فراهم می باشد.</value>
+  </data>
+  <data name="Views_Shared_DisplayTemplates_OrderModel_Summary_Track" xml:space="preserve">
+    <value>بررسی وضعیت</value>
+  </data>
+  <data name="Views_Shared_DisplayTemplates_OrderModel_Summary_Status" xml:space="preserve">
+    <value>وضعیت: {0}</value>
+  </data>
+  <data name="Views_Shared_DisplayTemplates_OrderModel_Summary_TotalPrice" xml:space="preserve">
+    <value>هزینه قابل پرداخت: {0}</value>
+  </data>
+  <data name="Members_OrderStatus_Completed" xml:space="preserve">
+    <value>تکمیل شده</value>
+  </data>
+  <data name="Members_OrderStatus_Paid" xml:space="preserve">
+    <value>پرداخت شده</value>
+  </data>
+  <data name="Members_OrderStatus_PayOnDemand" xml:space="preserve">
+    <value>پرداخت در زمان تحویل</value>
+  </data>
+  <data name="Members_OrderStatus_Rejected" xml:space="preserve">
+    <value>برگشت خورده</value>
+  </data>
+  <data name="Members_OrderStatus_Submitted" xml:space="preserve">
+    <value>ثبت شده</value>
+  </data>
+  <data name="Members_CheckOutType_OnlinePayment" xml:space="preserve">
+    <value>پرداخت آنلاین</value>
+  </data>
+  <data name="Members_CheckOutType_PayOnDemand" xml:space="preserve">
+    <value>پرداخت هنگام تحویل</value>
+  </data>
+  <data name="Error_Order_AlreadyCheckedOut" xml:space="preserve">
+    <value>امکان پرداخت این سفارش وجود ندارد.</value>
+  </data>
+  <data name="Success_PreparingPaymentRequest" xml:space="preserve">
+    <value>شما در حال انتقال به درگاه بانک هستید...</value>
+  </data>
+  <data name="Success_ReturingToOrdersList" xml:space="preserve">
+    <value>در حال بازگشت به لیست سفارشات...</value>
+  </data>
+  <data name="Views_Cart_Form_ContinueShopping" xml:space="preserve">
+    <value>ادامه خرید...</value>
+  </data>
+  <data name="Views_Shared_DisplayTemplates_CartItemModel_AddToCart" xml:space="preserve">
+    <value>افزایش تعداد</value>
+  </data>
+  <data name="Views_Shared_DisplayTemplates_CartItemModel_RemoveAllFromCart" xml:space="preserve">
+    <value>حذف از سبد</value>
+  </data>
+  <data name="Members_Login_CellPhoneOrEmail" xml:space="preserve">
+    <value> شماره همراه یا ایمیل</value>
+  </data>
+  <data name="Members_Login_Password" xml:space="preserve">
+    <value>کلمه عبور</value>
+  </data>
+  <data name="Members_Register_CellPhone" xml:space="preserve">
+    <value>شماره همراه</value>
+  </data>
+  <data name="Members_Register_Email" xml:space="preserve">
+    <value>ایمیل</value>
+  </data>
+  <data name="Members_Register_FirstName" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="Members_Register_LastName" xml:space="preserve">
+    <value>نام خانوادگی</value>
+  </data>
+  <data name="Members_Register_Password" xml:space="preserve">
+    <value>کلمه عبور</value>
+  </data>
+  <data name="Members_Register_PasswordConfirmation" xml:space="preserve">
+    <value>تائید کلمه عبور</value>
+  </data>
+  <data name="Error_Order_NotCancellable" xml:space="preserve">
+    <value>امکان لغو سفارش وجود ندارد.</value>
+  </data>
+  <data name="Members_OrderStatus_Cancelled" xml:space="preserve">
+    <value>لغو شده</value>
+  </data>
+  <data name="Success_OrderCancelled" xml:space="preserve">
+    <value>سفارش مورد نظر با موفقیت لغو شد.</value>
+  </data>
+  <data name="Views_Shared_DisplayTemplates_OrderModel_Cancel" xml:space="preserve">
+    <value>لغو سفارش</value>
+  </data>
+  <data name="Views_Shared_DisplayTemplates_OrderModel_CheckOut" xml:space="preserve">
+    <value>پرداخت سفارش</value>
+  </data>
+  <data name="Views_Shared_DisplayTemplates_OrderModel_Track" xml:space="preserve">
+    <value>بررسی وضعیت سفارش</value>
+  </data>
+  <data name="Error_NotImplementedYet" xml:space="preserve">
+    <value>با عرض پوزش، این بخش هنوز تکمیل نشده است.</value>
+  </data>
+  <data name="Views_Notification_OrderSubmitted_Headline" xml:space="preserve">
+    <value>{0} عزیز، سفارش شما با مشخصات ذیل در هایپرمارکت سون به ثبت رسیده است.</value>
+  </data>
+  <data name="Views_Notification_OrderSubmitted_Message" xml:space="preserve">
+    <value>{0} عزیز، سفارش شما با کد {1} در هایپرمارکت سون به ثبت رسیده است.</value>
+  </data>
+  <data name="Views_Notification_OrderSubmitted_OrderLineDetails" xml:space="preserve">
+    <value>&lt;a href="{0}" target="_blank"&gt;{1}&lt;/a&gt; ({2})</value>
+  </data>
+  <data name="Views_Notification_OrderSubmitted_OrderLinesTitle" xml:space="preserve">
+    <value>اقلام این سفارش:</value>
+  </data>
+  <data name="Views_Notification_OrderSubmitted_Pricing" xml:space="preserve">
+    <value>مبلغ قابل پرداخت: {0}</value>
+  </data>
+  <data name="Views_Notification_OrderSubmitted_Status" xml:space="preserve">
+    <value>وضعیت سفارش: {0}</value>
+  </data>
+  <data name="Views_Notification_OrderSubmitted_Tracking" xml:space="preserve">
+    <value>کد سفارش: &lt;a href="{0}" target="_blank"&gt;{1}&lt;/a&gt; (ثبت شده در {2})</value>
+  </data>
+  <data name="Views_Notification_OrderSubmitted_Subject" xml:space="preserve">
+    <value>سون هایپر: ثبت سفارش جدید</value>
+  </data>
+  <data name="Members_ComplaintPriority_High" xml:space="preserve">
+    <value>زیاد</value>
+  </data>
+  <data name="Members_ComplaintPriority_Low" xml:space="preserve">
+    <value>کم</value>
+  </data>
+  <data name="Members_ComplaintPriority_Normal" xml:space="preserve">
+    <value>معمولی</value>
+  </data>
+  <data name="Members_ComplaintStatus_Pending" xml:space="preserve">
+    <value>معلق</value>
+  </data>
+  <data name="Members_ComplaintStatus_Rejected" xml:space="preserve">
+    <value>رد شده</value>
+  </data>
+  <data name="Members_ComplaintStatus_Replied" xml:space="preserve">
+    <value>پاسخ داده شده</value>
+  </data>
+  <data name="Views_Order_Track_Complaint_Description" xml:space="preserve">
+    <value>در این بخش در صورت نیاز امکان ثبت شکایت برای این سفارش، ویرایش متن شکایت (در صورتی که توسط مدیر هنوز بررسی نشده باشد) و همچنین مشاهده پاسخ مدیران هایپر سون در قبال شکایت ثبت شده شما را دارید.</value>
+  </data>
+  <data name="Views_Order_Track_AccessToken_Description" xml:space="preserve">
+    <value>برای بررسی وضعیت سفارش شما، ابتدا شناسه آنرا در فرم مقابل وارد نموده و سپس کلید &lt;span class="WebPlex-English"&gt;Enter&lt;/span&gt; را بزنید تا اطلاعات آن نمایش داده شود.</value>
+  </data>
+  <data name="Members_TrackViewModel_AccessToken" xml:space="preserve">
+    <value>شناسه سفارش</value>
+  </data>
+  <data name="Validation_NotFound" xml:space="preserve">
+    <value>{0} وجود ندارد.</value>
+  </data>
+  <data name="Views_Shared_DisplayTemplates_OrderComplaintModel_Message" xml:space="preserve">
+    <value>متن اعتراض: {0} ({1})</value>
+  </data>
+  <data name="Views_Shared_DisplayTemplates_OrderComplaintModel_Priority" xml:space="preserve">
+    <value>درجه اهمیت: {0}</value>
+  </data>
+  <data name="Views_Shared_DisplayTemplates_OrderComplaintModel_Reply" xml:space="preserve">
+    <value>پاسخ: {0} ({1})</value>
+  </data>
+  <data name="Views_Shared_DisplayTemplates_OrderComplaintModel_Status" xml:space="preserve">
+    <value>وضعیت: {0}</value>
+  </data>
+  <data name="Success_OrderComplaintSubmitted" xml:space="preserve">
+    <value>شکایت شما با موفقیت ثبت شد.</value>
+  </data>
+  <data name="Success_OrderComplaintUpdated" xml:space="preserve">
+    <value>شکایت شما با موفقیت بروز شد.</value>
+  </data>
+  <data name="Members_CustomerGender_Female" xml:space="preserve">
+    <value>زن</value>
+  </data>
+  <data name="Members_CustomerGender_Male" xml:space="preserve">
+    <value>مرد</value>
+  </data>
+  <data name="Members_Customer_Gender" xml:space="preserve">
+    <value>جنسیت</value>
+  </data>
+  <data name="Error_NotFound_Image" xml:space="preserve">
+    <value>تصویر مورد نظر وجود ندارد.</value>
+  </data>
+  <data name="Members_Customer_IsAdmin" xml:space="preserve">
+    <value>کاربر مدیر؟</value>
+  </data>
+  <data name="Members_Customer_InvalidCredentialsAttempt" xml:space="preserve">
+    <value>تعداد دفعات ورود گذرواژه اشتباه</value>
+  </data>
+  <data name="Members_Customer_LockedOutDateUtc" xml:space="preserve">
+    <value>تاریخ مسدود شدن</value>
+  </data>
+  <data name="Validation_CustomerAlreadyLocked" xml:space="preserve">
+    <value>حسابت مسدوده که! {0} دقیقه دیگه میتونی دوباره سعی کنی :(</value>
+  </data>
+  <data name="Validation_CustomerLocked" xml:space="preserve">
+    <value>{0} بار رمزت رو اشتباه زدی حسابت مسدود شد! {1} دقیقه دیگه دوباره تلاش کن :(</value>
+  </data>
+  <data name="Views_Shared_TopLeft_ResetPassword" xml:space="preserve">
+    <value>بازیابی کلمه عبور</value>
+  </data>
+  <data name="Members_ResetPassword_CellPhoneOrEmail" xml:space="preserve">
+    <value>شماره همراه یا ایمیل</value>
+  </data>
+  <data name="Success_ResetPasswordTokenSent" xml:space="preserve">
+    <value>ایمیلی حاوی اطلاعات بازیابی کلمه عبور برای شما ارسال شد.</value>
+  </data>
+  <data name="Validation_InvalidEmailOrCellPhone" xml:space="preserve">
+    <value>لطفا یک شماره همراه یا ایمیل معتبر وارد نمائید.</value>
+  </data>
+  <data name="Views_Account_ResetPassword_Description" xml:space="preserve">
+    <value>بمنظور بازیابی کلمه عبور خود، فرم مقابل را با دقت  تکمیل کرده کلید &lt;span class="WebPlex-English"&gt;Enter&lt;/span&gt; را بزنید.</value>
+  </data>
+  <data name="Views_Account_ResetPassword_FormTitle" xml:space="preserve">
+    <value>مشتری گرامی</value>
+  </data>
+  <data name="Views_Account_ResetPassword_Login" xml:space="preserve">
+    <value>ورود به حساب کاربری...</value>
+  </data>
+  <data name="Views_Account_ResetPassword_Meta_Title" xml:space="preserve">
+    <value>بازیابی کلمه عبور</value>
+  </data>
+  <data name="Views_Account_ResetPassword_ResetPassword" xml:space="preserve">
+    <value>بازیابی کلمه عبور</value>
+  </data>
+  <data name="Members_Customer_ResetPasswordExpiresDateUtc" xml:space="preserve">
+    <value>تاریخ اعتبار نشانه</value>
+  </data>
+  <data name="Members_Customer_ResetPasswordRequestedDateUtc" xml:space="preserve">
+    <value>تاریخ درخواست بازیابی کلمه عبور</value>
+  </data>
+  <data name="Members_Customer_ResetPasswordToken" xml:space="preserve">
+    <value>نشانه بازیابی کلمه عبور</value>
+  </data>
+  <data name="Views_Account_ResetPasswordCallback_Description" xml:space="preserve">
+    <value>بمنظور ثبت کلمه عبور جدید خود، فرم مقابل را با دقت  تکمیل کرده کلید &lt;span class="WebPlex-English"&gt;Enter&lt;/span&gt; را بزنید.</value>
+  </data>
+  <data name="Views_Account_ResetPasswordCallback_FormTitle" xml:space="preserve">
+    <value>مشتری گرامی</value>
+  </data>
+  <data name="Views_Account_ResetPasswordCallback_Meta_Title" xml:space="preserve">
+    <value>ثبت کلمه عبور جدید</value>
+  </data>
+  <data name="Views_Account_ResetPasswordCallback_SetNewPassword" xml:space="preserve">
+    <value>ثبت کلمه عبور جدید</value>
+  </data>
+  <data name="Views_Notification_PasswordResetRequested_ExpirationDate" xml:space="preserve">
+    <value>تاریخ اعتبار: {0}</value>
+  </data>
+  <data name="Views_Notification_PasswordResetRequested_Headline" xml:space="preserve">
+    <value>{0} عزیز، درخواست بازیابی کلمه عبور حساب کاربری شما با مشخصات ذیل در هایپرمارکت سون به ثبت رسیده است. اگر این درخواست از جانب شما نبوده است می توانید محتوی این ایمیل را نادیده بگیرید.</value>
+  </data>
+  <data name="Views_Notification_PasswordResetRequested_Message" xml:space="preserve">
+    <value>{0} عزیز، ایمیلی حاوی اطلاعات مورد نیاز برای بازیابی کلمه عبور حساب کاربری شما در هایپرمارکت سون برایتان ارسال گردیده است.</value>
+  </data>
+  <data name="Views_Notification_PasswordResetRequested_RequestDate" xml:space="preserve">
+    <value>تاریخ درخواست: {0}</value>
+  </data>
+  <data name="Views_Notification_PasswordResetRequested_ResetLink" xml:space="preserve">
+    <value>لینک بازیابی کلمه عبور: {0}</value>
+  </data>
+  <data name="Views_Notification_PasswordResetRequested_Subject" xml:space="preserve">
+    <value>سون هایپر: درخواست بازیابی کلمه عبور</value>
+  </data>
+  <data name="Views_Notification_PasswordReset_Headline" xml:space="preserve">
+    <value>{0} عزیز، کلمه عبور حساب کاربری شما در هایپرمارکت سون تغییر کرده است. اگر این کار توسط شما صورت نگرفته است لطفا هر چه سریعتر با ما تماس بگیرید.</value>
+  </data>
+  <data name="Views_Notification_PasswordReset_Message" xml:space="preserve">
+    <value>{0} عزیز، کلمه عبور حساب کاربری شما در هایپرمارکت سون تغییر کرده است.</value>
+  </data>
+  <data name="Views_Notification_PasswordReset_Subject" xml:space="preserve">
+    <value>سون هایپر: تغییر کلمه عبور</value>
+  </data>
+  <data name="Validation_ResetPasswordExpired" xml:space="preserve">
+    <value>متاسفانه درخواست بازیابی کلمه عبور شما منقضی شده است.</value>
+  </data>
+</root>

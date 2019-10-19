@@ -1,0 +1,137 @@
+﻿.WebPlex-Scrollable {
+    outline: none;
+}
+
+.jspContainer {
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.jspContainer.WebPlex-Shadow {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 10px 10px -10px inset;
+}
+
+.jspContainer,
+.jspContainer * {
+    outline: none !important;
+}
+
+.jspPane {
+    min-width: 534px;
+    position: absolute;
+    width: auto !important;
+}
+
+.jspVerticalBar {
+    background-color: rgba(245, 108, 2, 255);
+    height: 100%;
+    left: 0;
+    margin: 0 4px;
+    position: absolute;
+    top: 0;
+    width: 2px;
+}
+
+.jspHorizontalBar {
+    background-color: rgba(245, 108, 2, 255);
+    bottom: 0;
+    height: 2px;
+    margin: 4px 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+
+.jspCap {
+    display: none;
+}
+
+.jspHorizontalBar .jspCap {
+    float: right;
+}
+
+.jspTrack {
+    position: relative;
+}
+
+.jspDrag {
+    background-color: rgba(245, 108, 2, 255);
+    cursor: pointer;
+    left: 0;
+    position: relative;
+    top: 0;
+}
+
+.jspVerticalBar .jspTrack,
+.jspVerticalBar .jspDrag {
+    float: right;
+    right: -2px;
+    width: 10px;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag {
+    float: left;
+    height: 10px;
+    top: -2px;
+}
+
+.WebPlex-Cap {
+    background: rgba(215, 215, 215, 1);
+    display: block;
+    height: 4px;
+    margin-top: -4px;
+    width: 2px;
+}
+
+.WebPlex-LeftCap {
+    float: left;
+}
+
+.WebPlex-RightCap {
+    float: right;
+}
+
+.jspArrow {
+    background: rgba(80, 80, 109, 255);
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-indent: -20000px;
+}
+
+.jspArrow.jspDisabled {
+    background: rgba(128, 128, 141, 255);
+    cursor: default;
+}
+
+.jspVerticalBar .jspArrow {
+    height: 16px;
+}
+
+.jspHorizontalBar .jspArrow {
+    float: right;
+    height: 100%;
+    width: 16px;
+}
+
+.jspVerticalBar .jspArrow:focus {
+    outline: none;
+}
+
+.jspCorner {
+    background: rgba(35, 35, 35, 255);
+    float: right;
+    height: 10px;
+    margin-top: -4px;
+}
+
+* html .jspCorner {
+    margin: 0 0 0 -3px;
+}
+
+.jspVertical .jspPane {
+    margin-left: 0 !important;
+}

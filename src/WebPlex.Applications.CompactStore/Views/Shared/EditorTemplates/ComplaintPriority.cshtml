@@ -1,0 +1,7 @@
+﻿@model ComplaintPriority
+
+@{
+    var selectList = Model.ToSelectList();
+}
+
+@Html.EditorFor(model => selectList)

@@ -1,0 +1,15 @@
+﻿@model ProductListViewModel
+
+@{
+    ViewBag.Title = Resources.Views_Product_List_Meta_Title;
+
+    if (Model.Category != null) {
+        ViewBag.Title += Resources.Views_Shared_TitleSeparator + Model.Category.Title;
+        ViewBag.Keywords += Model.Category.MetaKeywords;
+        ViewBag.Description += Model.Category.MetaDescription;
+    }
+}
+
+<ul id="WebPlex-ItemsPlaceholder" class="WebPlex-ProductsContainer@(!Model.Any() ? " WebPlex-Empty" : null) WebPlex-Clearfix@(CurrentCategory != null ? string.Format(" WebPlex-{0}", CurrentCategory.CssClass) : null)">
+    @Html.Partial(Views.Product._List_cshtml, Model)
+</ul>

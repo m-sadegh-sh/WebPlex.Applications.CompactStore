@@ -1,0 +1,9 @@
+﻿@model CartViewModel
+
+@{
+    ViewBag.Title = Resources.Views_Cart_Form_Meta_Title;
+}
+
+<div id="WebPlex-CartPlaceholder" class="WebPlex-CartContainer WebPlex-BoxContainer WebPlex-GridReversed WebPlex-Clearfix">
+    @Html.Partial(Views.Cart._Form_cshtml, Model)
+</div>

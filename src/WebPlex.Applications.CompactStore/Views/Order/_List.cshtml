@@ -1,0 +1,55 @@
+﻿@model OrderListViewModel
+
+<div class="WebPlex-GridContainer@(!Model.Any() ? " WebPlex-Empty" : null) WebPlex-Clearfix">
+    <div class="WebPlex-FormContainer WebPlex-Clearfix">
+        <h3 class="WebPlex-Title WebPlex-Clearfix">
+            @Html.ActionLink(Resources.Views_BackToHome, MVC.Home.Root(), new {
+                @class = "WebPlex-BackToHome WebPlex-PullLeft"
+            })
+            @Resources.Views_Order_List_Orders
+        </h3>
+        <div class="WebPlex-FormGroup WebPlex-Clearfix">
+            <table class="WebPlex-Grid">
+                <thead>
+                <tr>
+                    <th class="WebPlex-SubmitDateUtc">
+                        @Resources.Members_Order_SubmitDateUtc
+                    </th>
+                    <th class="WebPlex-TotalPrice">
+                        @Resources.Members_Order_TotalPrice
+                    </th>
+                    <th class="WebPlex-Status">
+                        @Resources.Members_Order_Status
+                    </th>
+                    <th class="WebPlex-Actions"></th>
+                </tr>
+                </thead>
+                <tbody>
+                @if (Model.Any()) {
+                    foreach (var order in Model) {
+                        var temp = order;
+
+                        @Html.DisplayFor(o => temp)
+                    }
+                    <tr class="WebPlex-Summaries">
+                        <td class="WebPlex-SubmitDateUtc"></td>
+                        <td class="WebPlex-TotalPrice">
+                            @Html.Raw(Resources.Views_Shared_CurrencyFormat, Model.Sum(o => o.TotalPrice))
+                        </td>
+                        <td class="WebPlex-Status"></td>
+                        <td class="WebPlex-Actions"></td>
+                    </tr>
+                } else {
+                    <tr>
+                        <td colspan="5">
+                            <span class="WebPlex-Empty">
+                                @Html.Raw(Resources.Views_Order_List_Empty, Url.Action(MVC.Home.Root()))
+                            </span>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

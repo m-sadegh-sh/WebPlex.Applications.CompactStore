@@ -1,0 +1,31 @@
+﻿@model OrderSubmittedViewModel
+
+<div class="WebPlex-MailContent">
+    <h1 class="WebPlex-Title">
+        @Html.Raw(Resources.Views_Notification_OrderSubmitted_Headline, Model.Customer.GetDisplayName())
+    </h1>
+
+    <ul class="WebPlex-HeadingList">
+        <li>
+            @Html.Raw(Resources.Views_Notification_OrderSubmitted_Tracking, Url.Abs(Url.Action(MVC.Order.Track(Model.Order.AccessToken))), Model.Order.AccessToken, Html.DisplayFor(model => model.Order.SubmitDateUtc))
+        </li>
+        <li>
+            @Html.Raw(Resources.Views_Notification_OrderSubmitted_Pricing, Html.DisplayFor(model => model.Order.TotalPrice))
+        </li>
+        <li>
+            @Html.Raw(Resources.Views_Notification_OrderSubmitted_Status, Html.DisplayFor(model => model.Order.Status))
+        </li>
+    </ul>
+
+    <h3 class="WebPlex-ContentTitle">
+        @Html.Raw(Resources.Views_Notification_OrderSubmitted_OrderLinesTitle)
+    </h3>
+
+    <ol class="WebPlex-ContentList">
+        @foreach (var orderLine in Model.OrderLines) {
+            <li>
+                @Html.Raw(Resources.Views_Notification_OrderSubmitted_OrderLineDetails, Url.Abs(Url.Action(MVC.Product.Details(orderLine.Product.Category.Slug, orderLine.Product.Slug))), orderLine.Product.Title, orderLine.Product.Id)
+            </li>
+        }
+    </ol>
+</div>

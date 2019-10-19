@@ -1,0 +1,41 @@
+﻿@{
+    Layout = Views.Shared._LayoutBase_cshtml;
+}
+
+<div class="WebPlex-TopContainer">
+    <div class="WebPlex-Fluid WebPlex-Clearfix">
+        @Html.Partial(Views.Shared._AsyncIndicator_cshtml)
+        @Html.Partial(Views.Shared._TopRight_cshtml)
+        @Html.Partial(Views.Shared._TopLeft_cshtml)
+    </div>
+</div>
+<div class="WebPlex-NavContainer">
+    <div class="WebPlex-Fluid WebPlex-Clearfix">
+        @Html.RouteLink(Resources.Views_Shared_DefaultLayout_Navbar_Home, MVC.Home.Root(), new {
+            alt = Resources.Views_Shared_DefaultLayout_Navbar_Home,
+            @class = "WebPlex-NavLogo WebPlex-PullRight"
+        })
+        @Html.Partial(Views.Shared._MainNav_cshtml)
+    </div>
+</div>
+<div class="WebPlex-MainContainer">
+    <div class="WebPlex-Fluid WebPlex-Clearfix">
+        @Html.Partial(Views.Shared._Aside_cshtml)
+        <div class="WebPlex-ContentContainer WebPlex-Clearfix">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+<div class="WebPlex-FooterContainer">
+    <div class="WebPlex-Fluid WebPlex-Clearfix">
+        @Html.Partial(Views.Shared._Footer_cshtml)
+    </div>
+</div>
+
+@section InlineStyles {
+    @RenderSection("InlineStyles", false)
+}
+
+@section InlineScripts {
+    @RenderSection("InlineScripts", false)
+}

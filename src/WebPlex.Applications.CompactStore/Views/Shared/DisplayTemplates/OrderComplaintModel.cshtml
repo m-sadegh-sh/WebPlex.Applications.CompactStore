@@ -1,0 +1,24 @@
+﻿@model OrderComplaintModel
+
+<div class="WebPlex-FormRow">
+    <div class="WebPlex-FormInput">
+        @Html.Raw(Resources.Views_Shared_DisplayTemplates_OrderComplaintModel_Message, Html.DisplayFor(model => model.Message), Html.DisplayFor(model => model.SubmitDateUtc))
+    </div>
+</div>
+<div class="WebPlex-FormRow">
+    <div class="WebPlex-FormInput">
+        @Html.Raw(Resources.Views_Shared_DisplayTemplates_OrderComplaintModel_Priority, Html.DisplayFor(model => model.Priority))
+    </div>
+</div>
+<div class="WebPlex-FormRow">
+    <div class="WebPlex-FormInput">
+        @Html.Raw(Resources.Views_Shared_DisplayTemplates_OrderComplaintModel_Status, Html.DisplayFor(model => model.Status))
+    </div>
+</div>
+@if (!string.IsNullOrEmpty(Model.Reply)) {
+    <div class="WebPlex-FormRow">
+        <div class="WebPlex-FormInput">
+            @Html.Raw(Resources.Views_Shared_DisplayTemplates_OrderComplaintModel_Reply, Html.DisplayFor(model => model.Reply), Html.DisplayFor(model => model.CheckDateUtc))
+        </div>
+    </div>
+}

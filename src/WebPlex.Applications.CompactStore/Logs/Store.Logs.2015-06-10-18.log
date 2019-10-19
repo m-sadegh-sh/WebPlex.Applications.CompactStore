@@ -1,0 +1,3 @@
+6/10/2015 6:15:04 PM	Failed to send message: The remote name could not be resolved: 'www.afe.ir'6/10/2015 6:15:06 PM	The remote name could not be resolved: 'www.afe.ir'	   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at WebPlex.Applications.CompactStore.Messaging.AfeMessagingHelpers.SendMessage(String cellPhone, String text, Object[] args) in d:\TFS\NETGUY Projects\WebPlex.Applications.CompactStore\WebPlex.Applications.CompactStore\Messaging\AfeMessagingHelpers.cs:line 16	System

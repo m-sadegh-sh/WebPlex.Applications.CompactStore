@@ -1,0 +1,10 @@
+﻿@model LoginModel
+
+@{
+    Layout = Views.Shared._MinimalLayout_cshtml;
+    ViewBag.Title = Resources.Views_Account_Login_Meta_Title;
+}
+
+<div id="WebPlex-LoginContainer" class="WebPlex-BoxContainer WebPlex-Clearfix">
+    @Html.Partial(Views.Account._Login_cshtml, Model)
+</div>

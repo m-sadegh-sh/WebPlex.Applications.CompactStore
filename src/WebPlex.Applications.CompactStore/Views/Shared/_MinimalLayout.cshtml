@@ -1,0 +1,25 @@
+﻿@{
+    Layout = Views.Shared._LayoutBase_cshtml;
+}
+
+<div class="WebPlex-NarrowContainer">
+    <div class="WebPlex-Fluid">
+        @Html.Partial(Views.Shared._AsyncIndicator_cshtml)
+        <div class="WebPlex-ContentContainer WebPlex-Clearfix" data-vertically-centered="true">
+            @RenderBody()
+        </div>
+    </div>
+    <div class="WebPlex-FooterContainer" data-vertical-excluded="true">
+        <div class="WebPlex-Fluid WebPlex-Clearfix">
+            @Html.Partial(Views.Shared._Footer_cshtml)
+        </div>
+    </div>
+</div>
+
+@section InlineStyles {
+    @RenderSection("InlineStyles", false)
+}
+
+@section InlineScripts {
+    @RenderSection("InlineScripts", false)
+}

@@ -1,0 +1,25 @@
+﻿@model OrderModel
+
+@Html.HiddenFor(model => model.AccessToken)
+
+<div class="WebPlex-FormRow WebPlex-InlineCommand">
+    <div class="WebPlex-FormInput">
+        <span>
+            @Html.Raw(Resources.Views_Shared_DisplayTemplates_OrderModel_Summary_Title, Model.Id, Html.DisplayFor(model => model.SubmitDateUtc))
+        </span>
+    </div>
+    @Html.ActionLink("", MVC.Order.Track(Model.AccessToken), new {
+        @class = "WebPlex-Button WebPlex-Track",
+        title = Resources.Views_Shared_DisplayTemplates_OrderModel_Summary_Track
+    }).UseContent(@"<span class=""WebPlex-ViewPort""></span>{0}")
+</div>
+<div class="WebPlex-FormRow">
+    <div class="WebPlex-FormInput">
+        @Html.Raw(Resources.Views_Shared_DisplayTemplates_OrderModel_Summary_TotalPrice, Html.DisplayFor(model => model.TotalPrice))
+    </div>
+</div>
+<div class="WebPlex-FormRow">
+    <div class="WebPlex-FormInput">
+        @Html.Raw(Resources.Views_Shared_DisplayTemplates_OrderModel_Summary_Status, Html.DisplayFor(model => model.Status))
+    </div>
+</div>

@@ -1,0 +1,78 @@
+﻿@model CartViewModel
+
+<div id="WebPlex-CartContainer" class="WebPlex-GridContainer@(!Model.Any() ? " WebPlex-Empty" : null) WebPlex-Clearfix">
+    <div class="WebPlex-FormContainer WebPlex-Clearfix">
+        <h3 class="WebPlex-Title WebPlex-Clearfix">
+            @Html.ActionLink(Resources.Views_BackToHome, MVC.Home.Root(), new {
+                @class = "WebPlex-BackToHome WebPlex-PullLeft"
+            })
+            @Resources.Views_Cart_Form_FormTitle
+        </h3>
+        <div class="WebPlex-FormGroup WebPlex-Clearfix">
+            <table class="WebPlex-Grid">
+                <thead>
+                <tr>
+                    <th class="WebPlex-ProductTitle">
+                        @Resources.Members_CartItem_ProductTitle
+                    </th>
+                    <th class="WebPlex-Count">
+                        @Resources.Members_CartItem_Count
+                    </th>
+                    <th class="WebPlex-UnitPrice">
+                        @Resources.Members_CartItem_UnitPrice
+                    </th>
+                    <th class="WebPlex-TotalPrice">
+                        @Resources.Members_CartItem_TotalPrice
+                    </th>
+                    <th class="WebPlex-Actions"></th>
+                </tr>
+                </thead>
+                <tbody>
+                @if (Model.Any()) {
+                    foreach (var cartItem in Model) {
+                        var temp = cartItem;
+
+                        @Html.DisplayFor(ci => temp)
+                    }
+                    <tr class="WebPlex-Summaries">
+                        <td class="WebPlex-ProductTitle"></td>
+                        <td class="WebPlex-Count">
+                            @Model.Sum(ci => ci.Count)
+                        </td>
+                        <td class="WebPlex-UnitPrice"></td>
+                        <td class="WebPlex-TotalPrice">
+                            @Html.Raw(Resources.Views_Shared_CurrencyFormat, Model.Sum(ci => ci.TotalPrice))
+                        </td>
+                        <td class="WebPlex-Actions"></td>
+                    </tr>
+                } else {
+                    <tr>
+                        <td colspan="5">
+                            <span class="WebPlex-Empty">
+                                    @Resources.Views_Cart_Form_Empty
+                                </span>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="WebPlex-ButtonStack WebPlex-PullLeft WebPlex-Clearfix">
+        @using (Ajax.BeginForm(MVC.Order.Submit(), Ajax.Options(
+            onBegin: "webPlexSubmitOrderOnBegin",
+            onSuccess: "webPlexSubmitOrderOnSuccess",
+            onFailure: "webPlexSubmitOrderOnFailure",
+            onComplete: "webPlexSubmitOrderOnComplete"
+        ))) {
+            <button class="WebPlex-Button WebPlex-SubmitOrder">
+                <span class="WebPlex-ViewPort"></span>@Resources.Views_Cart_Form_SubmitOrder
+            </button>
+        }
+    </div>
+    <div class="WebPlex-ButtonStack WebPlex-Secondary WebPlex-PullRight WebPlex-Clearfix">
+        @Html.ActionLink(Resources.Views_Cart_Form_ContinueShopping, MVC.Home.Root(), new {
+            @class = "WebPlex-Button"
+        })
+    </div>
+</div>

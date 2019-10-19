@@ -1,0 +1,653 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <_PublishTargetUrl>D:\TFS\NETGUY Projects\WebPlex.Applications.CompactStore\Published</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AppSettings.config">
+      <publishTime>02/19/2015 18:52:32</publishTime>
+    </File>
+    <File Include="AppSettings.Release.config">
+      <publishTime>02/18/2015 00:55:41</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Farnaz.eot">
+      <publishTime>11/05/2014 09:35:10</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Farnaz.ttf">
+      <publishTime>11/05/2014 09:35:10</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Farnaz.woff">
+      <publishTime>11/05/2014 09:35:10</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Koodak.eot">
+      <publishTime>11/05/2014 09:35:10</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Koodak.ttf">
+      <publishTime>11/05/2014 09:35:10</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Koodak.woff">
+      <publishTime>11/05/2014 09:35:10</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Mehr.eot">
+      <publishTime>11/05/2014 09:35:10</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Mehr.ttf">
+      <publishTime>11/05/2014 09:35:10</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Mehr.woff">
+      <publishTime>11/05/2014 09:35:10</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Nazanin.eot">
+      <publishTime>11/05/2014 09:35:10</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Nazanin.ttf">
+      <publishTime>11/05/2014 09:35:10</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Nazanin.woff">
+      <publishTime>11/05/2014 09:35:10</publishTime>
+    </File>
+    <File Include="Assets/Fonts/NazaninBold.eot">
+      <publishTime>11/05/2014 09:35:10</publishTime>
+    </File>
+    <File Include="Assets/Fonts/NazaninBold.ttf">
+      <publishTime>11/05/2014 09:35:10</publishTime>
+    </File>
+    <File Include="Assets/Fonts/NazaninBold.woff">
+      <publishTime>11/05/2014 09:35:10</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Titr.eot">
+      <publishTime>11/05/2014 09:35:10</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Titr.ttf">
+      <publishTime>11/05/2014 09:35:10</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Titr.woff">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Yekan.eot">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Yekan.ttf">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Fonts/Yekan.woff">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/Actions-Cancel.png">
+      <publishTime>12/28/2014 23:34:41</publishTime>
+    </File>
+    <File Include="Assets/Images/Actions-CheckOut.png">
+      <publishTime>12/28/2014 23:36:21</publishTime>
+    </File>
+    <File Include="Assets/Images/Actions-Track.png">
+      <publishTime>12/29/2014 00:06:05</publishTime>
+    </File>
+    <File Include="Assets/Images/AddToBasket.png">
+      <publishTime>12/26/2014 06:54:07</publishTime>
+    </File>
+    <File Include="Assets/Images/AddToBasketGray.png">
+      <publishTime>01/17/2015 23:31:07</publishTime>
+    </File>
+    <File Include="Assets/Images/AddToBasketOrage.png">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/AddToCart.png">
+      <publishTime>12/26/2014 15:58:16</publishTime>
+    </File>
+    <File Include="Assets/Images/BackgroundPattern.png">
+      <publishTime>02/09/2015 01:50:11</publishTime>
+    </File>
+    <File Include="Assets/Images/BackToHome.png">
+      <publishTime>12/26/2014 05:36:34</publishTime>
+    </File>
+    <File Include="Assets/Images/BackToList.png">
+      <publishTime>12/26/2014 05:36:29</publishTime>
+    </File>
+    <File Include="Assets/Images/Basket.png">
+      <publishTime>12/26/2014 05:50:27</publishTime>
+    </File>
+    <File Include="Assets/Images/Categories/AccessManagement.png">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/Categories/Calendar.png">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/Categories/ContentManagement.png">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/Categories/DailyEvents.png">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/Categories/Developer.png">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/Categories/Infrastructure.png">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/Categories/NewsManagement.png">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/Categories/Notification.png">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/Categories/Office.png">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/Categories/Polling.png">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/Categories/Profile.png">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/Categories/Shopping.png">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/Categories/SingleSignOn.png">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/Categories/Tenders.png">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/Categories/User.png">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/Categories/UserInterface.png">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Images/ChangePassword.png">
+      <publishTime>12/28/2014 23:47:28</publishTime>
+    </File>
+    <File Include="Assets/Images/CheckOut.png">
+      <publishTime>12/26/2014 14:14:36</publishTime>
+    </File>
+    <File Include="Assets/Images/ConfirmOrder.png">
+      <publishTime>12/26/2014 14:14:31</publishTime>
+    </File>
+    <File Include="Assets/Images/Contact.png">
+      <publishTime>12/28/2014 23:06:09</publishTime>
+    </File>
+    <File Include="Assets/Images/DefaultAvatar.png">
+      <publishTime>11/21/2014 17:34:40</publishTime>
+    </File>
+    <File Include="Assets/Images/Details.png">
+      <publishTime>12/26/2014 06:54:13</publishTime>
+    </File>
+    <File Include="Assets/Images/FavIcon.png">
+      <publishTime>01/02/2015 23:26:19</publishTime>
+    </File>
+    <File Include="Assets/Images/Galleria-Loader.gif">
+      <publishTime>01/17/2015 22:20:19</publishTime>
+    </File>
+    <File Include="Assets/Images/Galleria-Map.png">
+      <publishTime>01/17/2015 22:20:19</publishTime>
+    </File>
+    <File Include="Assets/Images/Hide.png">
+      <publishTime>12/26/2014 06:52:30</publishTime>
+    </File>
+    <File Include="Assets/Images/Loader.gif">
+      <publishTime>01/17/2015 22:20:19</publishTime>
+    </File>
+    <File Include="Assets/Images/Login.png">
+      <publishTime>12/28/2014 23:16:15</publishTime>
+    </File>
+    <File Include="Assets/Images/Logo.png">
+      <publishTime>01/02/2015 23:27:26</publishTime>
+    </File>
+    <File Include="Assets/Images/MoreArrow.png">
+      <publishTime>12/26/2014 05:35:47</publishTime>
+    </File>
+    <File Include="Assets/Images/Orders.png">
+      <publishTime>12/28/2014 23:27:58</publishTime>
+    </File>
+    <File Include="Assets/Images/PoweredBy.png">
+      <publishTime>12/26/2014 05:44:37</publishTime>
+    </File>
+    <File Include="Assets/Images/Register.png">
+      <publishTime>12/28/2014 23:14:39</publishTime>
+    </File>
+    <File Include="Assets/Images/RemoveAllFromCart.png">
+      <publishTime>12/26/2014 15:57:45</publishTime>
+    </File>
+    <File Include="Assets/Images/RemoveCategoryFilter.png">
+      <publishTime>12/26/2014 07:09:21</publishTime>
+    </File>
+    <File Include="Assets/Images/RemoveCategoryFilterHover.png">
+      <publishTime>12/26/2014 07:09:26</publishTime>
+    </File>
+    <File Include="Assets/Images/RemoveFromCart.png">
+      <publishTime>12/26/2014 15:57:53</publishTime>
+    </File>
+    <File Include="Assets/Images/Search.png">
+      <publishTime>11/18/2014 21:06:58</publishTime>
+    </File>
+    <File Include="Assets/Images/Show.png">
+      <publishTime>12/26/2014 06:52:36</publishTime>
+    </File>
+    <File Include="Assets/Images/SortAscending.png">
+      <publishTime>12/26/2014 06:32:17</publishTime>
+    </File>
+    <File Include="Assets/Images/SortDescending.png">
+      <publishTime>12/26/2014 06:32:44</publishTime>
+    </File>
+    <File Include="Assets/Images/Sprite.png">
+      <publishTime>02/11/2015 19:54:20</publishTime>
+    </File>
+    <File Include="Assets/Images/SubmitComplaint.png">
+      <publishTime>12/28/2014 23:26:53</publishTime>
+    </File>
+    <File Include="Assets/Images/SubmitOrder.png">
+      <publishTime>12/28/2014 23:51:21</publishTime>
+    </File>
+    <File Include="Assets/Images/Track.png">
+      <publishTime>12/28/2014 23:48:56</publishTime>
+    </File>
+    <File Include="Assets/Images/UpdateProfile.png">
+      <publishTime>12/28/2014 23:50:09</publishTime>
+    </File>
+    <File Include="Assets/Images/User.png">
+      <publishTime>12/26/2014 05:50:09</publishTime>
+    </File>
+    <File Include="Assets/Scripts/galleria-1.4.2.js">
+      <publishTime>02/11/2015 17:58:55</publishTime>
+    </File>
+    <File Include="Assets/Scripts/galleria.classic.js">
+      <publishTime>02/11/2015 17:58:55</publishTime>
+    </File>
+    <File Include="Assets/Scripts/jquery-2.1.1.js">
+      <publishTime>11/05/2014 09:35:11</publishTime>
+    </File>
+    <File Include="Assets/Scripts/jquery-2.1.3.js">
+      <publishTime>02/11/2015 17:58:56</publishTime>
+    </File>
+    <File Include="Assets/Scripts/jquery.jscrollpane.js">
+      <publishTime>02/14/2015 18:33:00</publishTime>
+    </File>
+    <File Include="Assets/Scripts/jquery.mousewheel.js">
+      <publishTime>12/17/2014 11:30:39</publishTime>
+    </File>
+    <File Include="Assets/Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>12/17/2014 11:34:38</publishTime>
+    </File>
+    <File Include="Assets/Scripts/jquery.validate.js">
+      <publishTime>02/11/2015 17:58:56</publishTime>
+    </File>
+    <File Include="Assets/Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>02/14/2015 18:27:45</publishTime>
+    </File>
+    <File Include="Assets/Scripts/store.cart.js">
+      <publishTime>02/11/2015 17:58:55</publishTime>
+    </File>
+    <File Include="Assets/Scripts/store.catalog.js">
+      <publishTime>12/28/2014 00:31:52</publishTime>
+    </File>
+    <File Include="Assets/Scripts/store.core.js">
+      <publishTime>02/17/2015 21:32:26</publishTime>
+    </File>
+    <File Include="Assets/Scripts/store.form.js">
+      <publishTime>02/11/2015 17:58:55</publishTime>
+    </File>
+    <File Include="Assets/Scripts/store.galleria.js">
+      <publishTime>02/11/2015 11:30:04</publishTime>
+    </File>
+    <File Include="Assets/Scripts/store.messages.js">
+      <publishTime>12/28/2014 21:30:28</publishTime>
+    </File>
+    <File Include="Assets/Scripts/store.scrolling.js">
+      <publishTime>02/11/2015 17:58:56</publishTime>
+    </File>
+    <File Include="Assets/Scripts/store.slider.js">
+      <publishTime>12/17/2014 11:30:39</publishTime>
+    </File>
+    <File Include="Assets/Styles/store.animations.css">
+      <publishTime>02/14/2015 18:27:45</publishTime>
+    </File>
+    <File Include="Assets/Styles/store.aside.css">
+      <publishTime>02/14/2015 18:27:45</publishTime>
+    </File>
+    <File Include="Assets/Styles/store.async.css">
+      <publishTime>02/14/2015 18:27:45</publishTime>
+    </File>
+    <File Include="Assets/Styles/store.checkout.css">
+      <publishTime>12/17/2014 11:30:39</publishTime>
+    </File>
+    <File Include="Assets/Styles/store.content.css">
+      <publishTime>02/14/2015 18:27:45</publishTime>
+    </File>
+    <File Include="Assets/Styles/store.fonts.css">
+      <publishTime>02/14/2015 18:27:45</publishTime>
+    </File>
+    <File Include="Assets/Styles/store.footer.css">
+      <publishTime>02/14/2015 18:27:45</publishTime>
+    </File>
+    <File Include="Assets/Styles/store.galleria.css">
+      <publishTime>02/14/2015 18:27:45</publishTime>
+    </File>
+    <File Include="Assets/Styles/store.grid.css">
+      <publishTime>02/14/2015 18:27:45</publishTime>
+    </File>
+    <File Include="Assets/Styles/store.menu.css">
+      <publishTime>02/14/2015 19:28:26</publishTime>
+    </File>
+    <File Include="Assets/Styles/store.misc.css">
+      <publishTime>02/14/2015 18:27:45</publishTime>
+    </File>
+    <File Include="Assets/Styles/store.product.css">
+      <publishTime>02/14/2015 18:27:45</publishTime>
+    </File>
+    <File Include="Assets/Styles/store.scrolling.css">
+      <publishTime>02/14/2015 18:27:45</publishTime>
+    </File>
+    <File Include="Assets/Styles/store.shared.css">
+      <publishTime>02/14/2015 18:59:42</publishTime>
+    </File>
+    <File Include="Assets/Styles/store.top.css">
+      <publishTime>02/14/2015 18:27:45</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>11/05/2014 09:41:59</publishTime>
+    </File>
+    <File Include="bin/Autofac.dll">
+      <publishTime>11/05/2014 09:43:43</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.Mvc.dll">
+      <publishTime>11/05/2014 09:43:38</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>02/11/2015 07:37:21</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.Net4.dll">
+      <publishTime>12/27/2014 19:31:13</publishTime>
+    </File>
+    <File Include="bin/Dnum.dll">
+      <publishTime>11/05/2014 09:43:22</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>02/11/2015 07:32:33</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>02/11/2015 07:32:33</publishTime>
+    </File>
+    <File Include="bin/FarsiLibrary.dll">
+      <publishTime>11/05/2014 09:43:56</publishTime>
+    </File>
+    <File Include="bin/GravatarHelper.dll">
+      <publishTime>02/11/2015 19:19:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>11/05/2014 09:32:56</publishTime>
+    </File>
+    <File Include="bin/Mvc.Mailer.dll">
+      <publishTime>01/02/2015 22:01:50</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>02/11/2015 07:20:21</publishTime>
+    </File>
+    <File Include="bin/RouteDebugger.dll">
+      <publishTime>11/05/2014 09:44:22</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>02/11/2015 07:33:21</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/05/2014 09:42:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>11/05/2014 09:32:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>02/11/2015 07:33:21</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>02/11/2015 07:33:21</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>02/11/2015 07:33:21</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>02/11/2015 07:33:21</publishTime>
+    </File>
+    <File Include="bin/T4MVCExtensions.dll">
+      <publishTime>02/11/2015 07:37:42</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>11/05/2014 09:41:51</publishTime>
+    </File>
+    <File Include="bin/WebPlex.Applications.CompactStore.dll">
+      <publishTime>02/19/2015 18:50:04</publishTime>
+    </File>
+    <File Include="ConnectionStrings.config">
+      <publishTime>02/19/2015 18:52:32</publishTime>
+    </File>
+    <File Include="ConnectionStrings.Debug.config">
+      <publishTime>02/19/2015 18:43:31</publishTime>
+    </File>
+    <File Include="ConnectionStrings.FTP.config">
+      <publishTime>02/19/2015 18:43:32</publishTime>
+    </File>
+    <File Include="ConnectionStrings.Release.config">
+      <publishTime>02/19/2015 18:42:59</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>11/05/2014 09:39:47</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/05/2014 10:02:24</publishTime>
+    </File>
+    <File Include="Logs/Empty.txt">
+      <publishTime>01/18/2015 00:36:11</publishTime>
+    </File>
+    <File Include="OrderLineTemplate.tpl">
+      <publishTime>11/14/2014 06:11:21</publishTime>
+    </File>
+    <File Include="OrderTemplate.tpl">
+      <publishTime>11/14/2014 06:11:11</publishTime>
+    </File>
+    <File Include="OutputCacheSettings.config">
+      <publishTime>02/19/2015 18:52:32</publishTime>
+    </File>
+    <File Include="OutputCacheSettings.Release.config">
+      <publishTime>02/18/2015 00:44:42</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>02/19/2015 18:30:49</publishTime>
+    </File>
+    <File Include="Properties/SlowCheetah/SlowCheetah.Transforms.targets">
+      <publishTime>02/19/2015 18:30:49</publishTime>
+    </File>
+    <File Include="Smtp.config">
+      <publishTime>02/19/2015 18:52:32</publishTime>
+    </File>
+    <File Include="Smtp.Release.config">
+      <publishTime>02/18/2015 00:47:14</publishTime>
+    </File>
+    <File Include="Uploads/Images/Customers/Empty.txt">
+      <publishTime>01/17/2015 21:51:34</publishTime>
+    </File>
+    <File Include="Uploads/Images/Products/Empty.txt">
+      <publishTime>01/17/2015 21:51:27</publishTime>
+    </File>
+    <File Include="Views/Account/ChangePassword.cshtml">
+      <publishTime>12/17/2014 14:13:37</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>12/23/2014 01:20:32</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>12/27/2014 19:37:52</publishTime>
+    </File>
+    <File Include="Views/Account/UpdateProfile.cshtml">
+      <publishTime>12/17/2014 14:06:29</publishTime>
+    </File>
+    <File Include="Views/Account/_ChangePassword.cshtml">
+      <publishTime>02/14/2015 18:27:46</publishTime>
+    </File>
+    <File Include="Views/Account/_Login.cshtml">
+      <publishTime>02/14/2015 18:27:46</publishTime>
+    </File>
+    <File Include="Views/Account/_Register.cshtml">
+      <publishTime>02/14/2015 18:27:46</publishTime>
+    </File>
+    <File Include="Views/Account/_UpdateProfile.cshtml">
+      <publishTime>02/14/2015 18:27:46</publishTime>
+    </File>
+    <File Include="Views/Cart/Form.cshtml">
+      <publishTime>12/23/2014 01:39:35</publishTime>
+    </File>
+    <File Include="Views/Cart/_Form.cshtml">
+      <publishTime>02/14/2015 18:27:46</publishTime>
+    </File>
+    <File Include="Views/Home/Error.cshtml">
+      <publishTime>12/21/2014 18:29:41</publishTime>
+    </File>
+    <File Include="Views/Home/_Error.cshtml">
+      <publishTime>02/11/2015 08:42:59</publishTime>
+    </File>
+    <File Include="Views/Notification/OrderSubmitted.cshtml">
+      <publishTime>02/14/2015 18:27:46</publishTime>
+    </File>
+    <File Include="Views/Order/CheckOut.cshtml">
+      <publishTime>12/17/2014 12:26:08</publishTime>
+    </File>
+    <File Include="Views/Order/List.cshtml">
+      <publishTime>12/28/2014 18:32:24</publishTime>
+    </File>
+    <File Include="Views/Order/Track.cshtml">
+      <publishTime>01/03/2015 23:39:37</publishTime>
+    </File>
+    <File Include="Views/Order/_CheckOut.cshtml">
+      <publishTime>02/14/2015 18:27:46</publishTime>
+    </File>
+    <File Include="Views/Order/_List.cshtml">
+      <publishTime>02/13/2015 23:45:56</publishTime>
+    </File>
+    <File Include="Views/Order/_Track.cshtml">
+      <publishTime>02/14/2015 18:27:46</publishTime>
+    </File>
+    <File Include="Views/Product/Details.cshtml">
+      <publishTime>01/17/2015 23:34:38</publishTime>
+    </File>
+    <File Include="Views/Product/List.cshtml">
+      <publishTime>12/17/2014 12:01:58</publishTime>
+    </File>
+    <File Include="Views/Product/_Details.cshtml">
+      <publishTime>02/14/2015 18:27:46</publishTime>
+    </File>
+    <File Include="Views/Product/_List.cshtml">
+      <publishTime>02/14/2015 00:53:39</publishTime>
+    </File>
+    <File Include="Views/Shared/DisplayTemplates/CartItemModel.cshtml">
+      <publishTime>02/14/2015 00:54:57</publishTime>
+    </File>
+    <File Include="Views/Shared/DisplayTemplates/ComplaintPriority.cshtml">
+      <publishTime>01/03/2015 23:42:43</publishTime>
+    </File>
+    <File Include="Views/Shared/DisplayTemplates/ComplaintStatus.cshtml">
+      <publishTime>01/03/2015 23:47:10</publishTime>
+    </File>
+    <File Include="Views/Shared/DisplayTemplates/Currency.cshtml">
+      <publishTime>12/18/2014 11:53:42</publishTime>
+    </File>
+    <File Include="Views/Shared/DisplayTemplates/Currency.Simple.cshtml">
+      <publishTime>11/29/2014 21:22:48</publishTime>
+    </File>
+    <File Include="Views/Shared/DisplayTemplates/CustomerGender.cshtml">
+      <publishTime>02/11/2015 18:46:52</publishTime>
+    </File>
+    <File Include="Views/Shared/DisplayTemplates/DateTime.cshtml">
+      <publishTime>02/14/2015 18:27:46</publishTime>
+    </File>
+    <File Include="Views/Shared/DisplayTemplates/MultiSelectList.cshtml">
+      <publishTime>12/21/2014 18:29:41</publishTime>
+    </File>
+    <File Include="Views/Shared/DisplayTemplates/OrderComplaintModel.cshtml">
+      <publishTime>01/04/2015 02:08:24</publishTime>
+    </File>
+    <File Include="Views/Shared/DisplayTemplates/OrderModel.cshtml">
+      <publishTime>02/14/2015 18:27:46</publishTime>
+    </File>
+    <File Include="Views/Shared/DisplayTemplates/OrderModel.Summary.cshtml">
+      <publishTime>02/09/2015 02:07:03</publishTime>
+    </File>
+    <File Include="Views/Shared/DisplayTemplates/OrderStatus.cshtml">
+      <publishTime>12/28/2014 21:41:56</publishTime>
+    </File>
+    <File Include="Views/Shared/DisplayTemplates/ProductModel.cshtml">
+      <publishTime>02/14/2015 18:27:46</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/Boolean.cshtml">
+      <publishTime>12/20/2014 00:09:11</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/CheckOutType.cshtml">
+      <publishTime>12/20/2014 00:09:51</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/ComplaintPriority.cshtml">
+      <publishTime>01/03/2015 23:42:20</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/ComplaintStatus.cshtml">
+      <publishTime>01/03/2015 23:46:44</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/CustomerGender.cshtml">
+      <publishTime>02/11/2015 18:47:07</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/MultiSelectList.cshtml">
+      <publishTime>12/20/2014 19:56:31</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/OrderComplaintModel.cshtml">
+      <publishTime>01/04/2015 02:45:43</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/OrderStatus.cshtml">
+      <publishTime>12/20/2014 00:09:06</publishTime>
+    </File>
+    <File Include="Views/Shared/Error_500.cshtml">
+      <publishTime>12/17/2014 12:01:33</publishTime>
+    </File>
+    <File Include="Views/Shared/_Aside.cshtml">
+      <publishTime>02/17/2015 22:23:13</publishTime>
+    </File>
+    <File Include="Views/Shared/_AsyncIndicator.cshtml">
+      <publishTime>02/14/2015 18:14:42</publishTime>
+    </File>
+    <File Include="Views/Shared/_DefaultLayout.cshtml">
+      <publishTime>02/14/2015 18:14:17</publishTime>
+    </File>
+    <File Include="Views/Shared/_Footer.cshtml">
+      <publishTime>02/14/2015 18:14:37</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutBase.cshtml">
+      <publishTime>02/15/2015 00:44:34</publishTime>
+    </File>
+    <File Include="Views/Shared/_MailerLayout.cshtml">
+      <publishTime>02/14/2015 18:14:48</publishTime>
+    </File>
+    <File Include="Views/Shared/_MainNav.cshtml">
+      <publishTime>02/14/2015 18:14:17</publishTime>
+    </File>
+    <File Include="Views/Shared/_MinimalLayout.cshtml">
+      <publishTime>02/14/2015 18:14:17</publishTime>
+    </File>
+    <File Include="Views/Shared/_TopLeft.cshtml">
+      <publishTime>02/14/2015 18:27:46</publishTime>
+    </File>
+    <File Include="Views/Shared/_TopRight.cshtml">
+      <publishTime>02/14/2015 18:14:17</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>02/14/2015 18:27:46</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>11/05/2014 09:38:02</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/19/2015 18:52:31</publishTime>
+    </File>
+    <File Include="WebPlex.Applications.CompactStore.pfx">
+      <publishTime>11/05/2014 09:54:57</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

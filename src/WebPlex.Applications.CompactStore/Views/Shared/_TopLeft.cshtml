@@ -1,0 +1,95 @@
+﻿@{
+    var displayCart = !(ViewContext.RouteData.GetRequiredString("Controller") == MVC.Cart.Name &&
+                        ViewContext.RouteData.GetRequiredString("Action") == MVC.Cart.ActionNames.Form);
+
+    var cartSwitchCssClass = !displayCart ? " WebPlex-Opened WebPlex-Gone" : null;
+    var cartSwitchData = !displayCart ? @" data-cart-opened=""true""" : null;
+    var actualLastItemCssClass = !displayCart ? " WebPlex-LastItem" : null;
+}
+
+<ul class="WebPlex-TopLinks WebPlex-PullLeft WebPlex-Clearfix">
+    <li class="WebPlex-LinkItem@(actualLastItemCssClass)">
+        <a id="WebPlexUser" href="@Url.Action(MVC.Account.UpdateProfile(Request.Url.PathAndQuery))" class="WebPlex-ParentItem WebPlex-Clearfix">
+            <div class="WebPlex-Button">
+                <span class="WebPlex-ViewPort"></span>
+                <span class="WebPlex-Icon WebPlex-UserIcon WebPlex-Clearfix">
+                    <span class="WebPlex-Label">@Resources.Views_Shared_TopLeft_MyProfile</span>
+                    <span class="WebPlex-ViewPort"></span>
+                </span>
+            </div>
+        </a>
+        <ul class="WebPlex-SubLinksPlaceholder WebPlex-BoxContainer">
+            @if (CustomerContext.Current.IsAuthenticated) {
+                var avatarUrl = Url.Gravatar(CustomerContext.Current.Customer.Email, 54, "404");
+
+                <li class="WebPlex-LinkItem WebPlex-UserItem">
+                    <div class="WebPlex-Clearfix">
+                        <span class="WebPlex-UserImage WebPlex-PullLeft WebPlex-@CustomerContext.Current.Customer.Gender.ToString()">
+                            <img src="@avatarUrl" class="WebPlex-Avatar" alt="@CustomerContext.Current.Customer.GetDisplayName()" />
+                        </span>
+                        <p class="WebPlex-UserText">
+                            <strong>
+                                @CustomerContext.Current.Customer.GetDisplayName()
+                            </strong>
+                            <span>
+                                @CustomerContext.Current.Customer.CellPhone
+                            </span>
+                        </p>
+                    </div>
+                </li>
+                <li class="WebPlex-LinkItem">
+                    @Html.RouteLink(Resources.Views_Shared_TopLeft_UpdateProfile, MVC.Account.UpdateProfile(Request.Url.PathAndQuery), new {
+                        @class = "WebPlex-LinkAnchor"
+                    })
+                </li>
+                <li class="WebPlex-LinkItem">
+                    @Html.RouteLink(Resources.Views_Shared_TopLeft_ChangePassword, MVC.Account.ChangePassword(Request.Url.PathAndQuery), new {
+                        @class = "WebPlex-LinkAnchor"
+                    })
+                </li>
+                <li class="WebPlex-LinkItem">
+                    <a href="@Url.Action(MVC.Order.List())" class="WebPlex-LinkAnchor">
+                        @Html.Raw(Resources.Views_Shared_TopLeft_Orders, OrdersCount)
+                    </a>
+                </li>
+                <li class="WebPlex-LinkItem">
+                    @Html.RouteLink(Resources.Views_Shared_TopLeft_Logout, MVC.Account.Logout(Request.Url.PathAndQuery), new {
+                        @class = "WebPlex-LinkAnchor"
+                    })
+                </li>
+            } else {
+                <li class="WebPlex-LinkItem">
+                    @Html.RouteLink(Resources.Views_Shared_TopLeft_Login, MVC.Account.Login(Request.Url.PathAndQuery), new {
+                        @class = "WebPlex-LinkAnchor"
+                    })
+                </li>
+                <li class="WebPlex-LinkItem">
+                    @Html.RouteLink(Resources.Views_Shared_TopLeft_ResetPassword, MVC.Account.ResetPassword(Request.Url.PathAndQuery), new {
+                        @class = "WebPlex-LinkAnchor"
+                    })
+                </li>
+                <li class="WebPlex-LinkItem">
+                    @Html.RouteLink(Resources.Views_Shared_TopLeft_Register, MVC.Account.Register(Request.Url.PathAndQuery), new {
+                        @class = "WebPlex-LinkAnchor"
+                    })
+                </li>
+            }
+        </ul>
+    </li>
+    <li class="WebPlex-LinkItem">
+        <a id="WebPlex-Cart"@(cartSwitchData) data-placeholder="#WebPlex-CartPlaceholder" href="@Url.Action(MVC.Cart.Form())" class="WebPlex-ParentItem@(cartSwitchCssClass) WebPlex-Clearfix" @(Ajax.OptionsString("WebPlex-CartPlaceholder", onBegin: "webPlexOpenCartOnBegin", onSuccess: "webPlexOpenCartOnSuccess", onFailure: "webPlexOpenCartOnFailure", onComplete: "webPlexOpenCartOnComplete"))>
+            <div class="WebPlex-Button">
+                <span class="WebPlex-ViewPort"></span>
+                <span class="WebPlex-Icon WebPlex-CartIcon WebPlex-Clearfix">
+                    <span id="WebPlex-CartItemsCount" class="WebPlex-Label">@CartItemsCount</span>
+                    <span class="WebPlex-ViewPort"></span>
+                </span>
+            </div>
+        </a>
+    </li>
+</ul>
+<div class="WebPlex-Clearfix"></div>
+
+@if (displayCart) {
+    <div id="WebPlex-CartPlaceholder" class="WebPlex-SubLinksPlaceholder WebPlex-BoxContainer "></div>
+}

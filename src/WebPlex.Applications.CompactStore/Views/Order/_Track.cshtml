@@ -1,0 +1,68 @@
+﻿@model TrackViewModel
+
+@using (Ajax.BeginForm(MVC.Order.Track(), Ajax.Options(
+    onBegin: "webPlexFormOnBegin",
+    onSuccess: "webPlexFormOnSuccess",
+    onFailure: "webPlexFormOnFailure",
+    onComplete: "webPlexFormOnComplete",
+    updateTargetId: "WebPlex-TrackContainer"
+                                              ))) {
+    @Html.AntiForgeryToken()
+    @Html.Hidden("ReturnUrl", ReturnUrl)
+    <div class="WebPlex-FormContainer WebPlex-Clearfix">
+        <h3 class="WebPlex-Title">
+            @Resources.Views_Order_Track_FormTitle
+        </h3>
+        <div class="WebPlex-FormGroup WebPlex-Clearfix">
+            <div class="WebPlex-FormFields WebPlex-PullLeft WebPlex-Clearfix">
+                <div class="WebPlex-FormRow">
+                    @Html.TextBoxFor(model => model.AccessToken, new {
+                        @class = Html.GetModelState(model => model.AccessToken, "WebPlex-FormInput WebPlex-Opposite"),
+                        data_auto_focus = true,
+                        placeholder = Html.DisplayNameFor(model => model.AccessToken)
+                    })
+                    @Html.ValidationMessageFor(model => model.AccessToken)
+                </div>
+            </div>
+            <p class="WebPlex-Description">
+                @Html.Raw(Resources.Views_Order_Track_AccessToken_Description)
+            </p>
+        </div>
+        @if (Model.OrderPresented) {
+            <div class="WebPlex-FormGroup WebPlex-Clearfix">
+                <div class="WebPlex-FormFields WebPlex-PullLeft WebPlex-Clearfix">
+                    @Html.DisplayFor(model => model.Order, "OrderModel.Summary")
+                </div>
+                <p class="WebPlex-Description">
+                    @Html.Raw(Resources.Views_Order_Track_Order_Description)
+                </p>
+            </div>
+            <div class="WebPlex-FormGroup WebPlex-Clearfix">
+                <div class="WebPlex-FormFields WebPlex-PullLeft WebPlex-Clearfix">
+                    @if (Model.CanSubmitComplaint) {
+                        @Html.EditorFor(model => model.SubmittedComplaint)
+                    } else {
+                        @Html.DisplayFor(model => model.SubmittedComplaint)
+                    }
+                </div>
+                <p class="WebPlex-Description">
+                    @Html.Raw(Resources.Views_Order_Track_Complaint_Description)
+                </p>
+            </div>
+        }
+    </div>
+
+    if (Model.CanSubmitComplaint) {
+        <div class="WebPlex-ButtonStack WebPlex-PullLeft WebPlex-Clearfix">
+            <button class="WebPlex-Button WebPlex-SubmitComplaint">
+                <span class="WebPlex-ViewPort"></span>@Resources.Views_Order_Track_SubmitComplaint
+            </button>
+        </div>
+    }
+
+    <div class="WebPlex-ButtonStack WebPlex-Secondary WebPlex-PullRight WebPlex-Clearfix">
+        @Html.ActionLink(Resources.Views_BackToOrders, MVC.Order.List(), new {
+            @class = "WebPlex-Button"
+        })
+    </div>
+}

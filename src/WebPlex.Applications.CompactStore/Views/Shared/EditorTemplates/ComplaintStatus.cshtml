@@ -1,0 +1,7 @@
+﻿@model ComplaintStatus
+
+@{
+    var selectList = Model.ToSelectList();
+}
+
+@Html.EditorFor(model => selectList)

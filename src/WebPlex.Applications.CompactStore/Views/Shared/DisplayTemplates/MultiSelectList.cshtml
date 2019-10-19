@@ -1,0 +1,21 @@
+﻿@model MultiSelectList
+
+@{
+    var fixedId = Html.IdFor(model => model).ToString().Replace("_selectList", "");
+    var fixedName = Html.NameFor(model => model).ToString().Replace(".selectList", "");
+}
+
+<div class="WebPlex-FormInput">
+    <div class="WebPlex-Switch WebPlex-ReadOnly WebPlex-Clearfix">
+        @foreach (SelectListItem item in Model.Items) {
+            <input type="radio" name="@fixedName" value="@item.Value" class="WebPlex-FormInput"
+                   id="@(string.Format("{0}_{1}", fixedId, item.Value))"
+                   @Html.Raw(item.Selected ? @" checked=""checked""" : null)/>
+
+            @Html.Label(item.Value, item.Text, new {
+                @class = "WebPlex-FormLabel"
+            })
+        }
+        <span class="WebPlex-Selection"></span>
+    </div>
+</div>

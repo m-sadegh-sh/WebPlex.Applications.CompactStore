@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BE4D91D6-7A11-4888-A883-9B922F197639}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebPlex.Applications.CompactStore</RootNamespace>
+    <AssemblyName>WebPlex.Applications.CompactStore</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>true</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\packages\Autofac.Mvc5.3.3.3\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=4.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.4.0.0-ci1031\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dnum">
+      <HintPath>..\packages\Dnum.1.1.4252.35574\lib\net35\Dnum.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FarsiLibrary">
+      <HintPath>..\packages\Farsi.Library.2.5.1.5\lib\net35\FarsiLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="GravatarHelper">
+      <HintPath>..\packages\GravatarHelper.3.2.3\lib\Net40\GravatarHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mvc.Mailer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvcMailer-vs2013.4.5.1-pre\lib\45\Mvc.Mailer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RouteDebugger">
+      <HintPath>..\packages\routedebugger.2.1.4.0\lib\net40\RouteDebugger.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="T4MVCExtensions, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\T4MVCExtensions.3.13.1\lib\net40\T4MVCExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppStart\ModelBinderRegisterar.cs" />
+    <Compile Include="AppStart\ModulesRegisterar.cs" />
+    <Compile Include="AppStart\MappingRegistrar.cs" />
+    <Compile Include="CartController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\OptimizationController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Controllers\StoreMailerBase.cs" />
+    <Compile Include="Data\Configuration\CategoryConfiguration.cs" />
+    <Compile Include="Data\Configuration\CustomerConfiguration.cs" />
+    <Compile Include="Data\Configuration\EntityConfigurationBase.cs" />
+    <Compile Include="Data\Configuration\OrderConfiguration.cs" />
+    <Compile Include="Data\Configuration\OrderComplaintConfiguration.cs" />
+    <Compile Include="Data\Configuration\OrderLineConfiguration.cs" />
+    <Compile Include="Data\Configuration\ProductConfiguration.cs" />
+    <Compile Include="Data\Repositories\CartItemRepository.cs" />
+    <Compile Include="Data\Repositories\CategoryRepository.cs" />
+    <Compile Include="Data\Repositories\CustomerRepository.cs" />
+    <Compile Include="Data\Repositories\DbRepositoryBase.cs" />
+    <Compile Include="Data\Repositories\ICartItemRepository.cs" />
+    <Compile Include="Data\Repositories\ICategoryRepository.cs" />
+    <Compile Include="Data\Repositories\ICustomerRepository.cs" />
+    <Compile Include="Data\Repositories\IOrderComplaintRepository.cs" />
+    <Compile Include="Data\Repositories\IOrderLineRepository.cs" />
+    <Compile Include="Data\Repositories\IOrderRepository.cs" />
+    <Compile Include="Data\Repositories\IProductRepository.cs" />
+    <Compile Include="Data\Repositories\IRepository.cs" />
+    <Compile Include="Data\Repositories\OrderComplaintRepository.cs" />
+    <Compile Include="Data\Repositories\OrderLineRepository.cs" />
+    <Compile Include="Data\Repositories\OrderRepository.cs" />
+    <Compile Include="Data\Repositories\ProductRepository.cs" />
+    <Compile Include="Data\Repositories\SessionRepositoryBase.cs" />
+    <Compile Include="Data\StoreContext.cs" />
+    <Compile Include="Data\StoreInitializer.cs" />
+    <Compile Include="Data\StoreMigrationsConfiguration.cs" />
+    <Compile Include="Models\Account\ChangePasswordModelBase.cs" />
+    <Compile Include="Models\Account\ResetPasswordCallbackModel.cs" />
+    <Compile Include="Models\Account\ResetPasswordModel.cs" />
+    <Compile Include="Mvc\ActionExecutionHelpers.cs" />
+    <Compile Include="Mvc\AdminRequiredAttribute.cs" />
+    <Compile Include="Messaging\AfeMessagingHelpers.cs" />
+    <Compile Include="Extensions\CustomerExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Modules\ErrorHandlingModule.cs" />
+    <Compile Include="Mapping\Formatters\DateTimeFormatter.cs" />
+    <Compile Include="Mvc\DelayOnAsyncAttribute.cs" />
+    <Compile Include="Mvc\AjaxHelperExtensions.cs" />
+    <Compile Include="Configuration\AppConfiguration.cs" />
+    <Compile Include="Configuration\ConvertHelpers.cs" />
+    <Compile Include="Mvc\CustomerAuthorizedAttribute.cs" />
+    <Compile Include="Mvc\UrlToken.cs" />
+    <Compile Include="Mvc\UrlTokenBinder.cs" />
+    <Compile Include="Mvc\AntiForgeryTokenValidatableAttribute.cs" />
+    <Compile Include="Security\CustomerContext.cs" />
+    <Compile Include="Mvc\EnsureReturnUrlAttribute.cs" />
+    <Compile Include="Logging\ExceptionSerializationHelpers.cs" />
+    <Compile Include="Mapping\Formatters\FileSizeFormatter.cs" />
+    <Compile Include="Mvc\HtmlHelperExtensions.cs" />
+    <Compile Include="Mvc\HtmlStringExtensions.cs" />
+    <Compile Include="Mapping\MappingExtensions.cs" />
+    <Compile Include="Extensions\ProductExtensions.cs" />
+    <Compile Include="Comparison\PropertyComparer.cs" />
+    <Compile Include="Helpers\EnumHelpers.cs" />
+    <Compile Include="Mvc\EnumRouteConstraint.cs" />
+    <Compile Include="Logging\LogHelpers.cs" />
+    <Compile Include="Mapping\MapHelpers.cs" />
+    <Compile Include="Helpers\PictureHelpers.cs" />
+    <Compile Include="Comparison\ProductComparer.cs" />
+    <Compile Include="Helpers\RandomHelpers.cs" />
+    <Compile Include="Routing\RouteHelpers.cs" />
+    <Compile Include="Security\SecurityHelpers.cs" />
+    <Compile Include="Helpers\Singleton.cs" />
+    <Compile Include="Mvc\SitemapResult.cs" />
+    <Compile Include="Routing\SlugRouteConstraint.cs" />
+    <Compile Include="Mvc\StoreViewPage.cs" />
+    <Compile Include="Helpers\StringHelpers.cs" />
+    <Compile Include="Mvc\TempDateHelpers.cs" />
+    <Compile Include="Modules\UrlNormalizerModule.cs" />
+    <Compile Include="Mvc\`StoreViewPage.cs" />
+    <Compile Include="AppStart\BundleRegisterar.cs" />
+    <Compile Include="AppStart\DatabaseInitilizerRegisterar.cs" />
+    <Compile Include="AppStart\GlobalFilterRegisterar.cs" />
+    <Compile Include="AppStart\ResolverRegisterar.cs" />
+    <Compile Include="AppStart\RouteRegisterar.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\NotificationController.cs" />
+    <Compile Include="HomeController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account\ChangePasswordModel.cs" />
+    <Compile Include="Models\Account\RegisterModel.cs" />
+    <Compile Include="Models\Account\LoginModel.cs" />
+    <Compile Include="Models\Cart\CartItemModel.cs" />
+    <Compile Include="Models\DbModelBase.cs" />
+    <Compile Include="Models\Home\ErrorHandlingModel.cs" />
+    <Compile Include="Models\Home\ErrorSummaryModel.cs" />
+    <Compile Include="Models\Parameters\CheckOutType.cs" />
+    <Compile Include="Models\Parameters\ComplaintPriority.cs" />
+    <Compile Include="Models\Parameters\ComplaintStatus.cs" />
+    <Compile Include="Models\Order\OrderComplaintModel.cs" />
+    <Compile Include="Models\Parameters\CustomerGender.cs" />
+    <Compile Include="Models\Result\CartOperationModel.cs" />
+    <Compile Include="Models\ModelBase.cs" />
+    <Compile Include="Models\Result\RedirectOperationModel.cs" />
+    <Compile Include="Models\Parameters\ChangeFrequency.cs" />
+    <Compile Include="Models\Account\CustomerModel.cs" />
+    <Compile Include="Models\Result\CustomerOperationModel.cs" />
+    <Compile Include="Models\Result\OperationModel.cs" />
+    <Compile Include="Models\Parameters\OperationType.cs" />
+    <Compile Include="Models\Order\OrderLineModel.cs" />
+    <Compile Include="Models\Order\OrderModel.cs" />
+    <Compile Include="Models\Product\CategoryModel.cs" />
+    <Compile Include="Models\Parameters\OrderStatus.cs" />
+    <Compile Include="Models\Product\ProductModel.cs" />
+    <Compile Include="Models\PictureInfo.cs" />
+    <Compile Include="Models\Home\SitemapItemModel.cs" />
+    <Compile Include="Models\Parameters\SortDirection.cs" />
+    <Compile Include="Models\Parameters\SortOrder.cs" />
+    <Compile Include="Models\Result\ValidateOperationModel.cs" />
+    <Compile Include="NotificationController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OptimizationController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SharedController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Notification\OrderSubmittedViewModel.cs" />
+    <Compile Include="ViewModels\Order\CheckOutViewModel.cs" />
+    <Compile Include="ViewModels\Cart\CartViewModel.cs" />
+    <Compile Include="ViewModels\Order\OrderListViewModel.cs" />
+    <Compile Include="ViewModels\Order\TrackViewModel.cs" />
+    <Compile Include="ViewModels\Product\ProductListViewModel.cs" />
+    <Compile Include="Models\Home\SitemapModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Images\FavIcon.png" />
+    <Content Include="Assets\Images\Loader.gif" />
+    <Content Include="Assets\Images\Sprite.png" />
+    <Content Include="Assets\Images\BackgroundPattern.png" />
+    <Content Include="Assets\Scripts\galleria-1.4.2.js" />
+    <Content Include="Assets\Scripts\galleria.classic.js" />
+    <Content Include="Assets\Scripts\jquery.jscrollpane.js" />
+    <Content Include="Assets\Scripts\jquery.mousewheel.js" />
+    <Content Include="Assets\Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Assets\Scripts\store.form.js" />
+    <Content Include="Assets\Scripts\store.cart.js" />
+    <Content Include="Assets\Scripts\store.catalog.js" />
+    <Content Include="Assets\Scripts\store.galleria.js" />
+    <Content Include="Assets\Scripts\store.messages.js" />
+    <Content Include="Assets\Scripts\store.core.js" />
+    <Content Include="Assets\Scripts\store.scrolling.js" />
+    <Content Include="Assets\Styles\store.animations.css" />
+    <Content Include="Assets\Styles\store.galleria.css" />
+    <Content Include="Assets\Styles\store.grid.css" />
+    <Content Include="Assets\Styles\store.footer.css" />
+    <Content Include="Assets\Styles\store.product.css" />
+    <Content Include="Assets\Styles\store.aside.css" />
+    <Content Include="Assets\Styles\store.misc.css" />
+    <Content Include="Assets\Styles\store.top.css" />
+    <Content Include="Assets\Styles\store.menu.css" />
+    <Content Include="Assets\Styles\store.async.css" />
+    <Content Include="Assets\Styles\store.shared.css" />
+    <Content Include="Assets\Styles\store.fonts.css" />
+    <Content Include="Assets\Styles\store.scrolling.css" />
+    <Content Include="Assets\Styles\store.content.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Assets\Fonts\Nazanin.eot" />
+    <Content Include="Assets\Fonts\Nazanin.ttf" />
+    <Content Include="Assets\Fonts\Nazanin.woff" />
+    <Content Include="Assets\Fonts\NazaninBold.eot" />
+    <Content Include="Assets\Fonts\NazaninBold.ttf" />
+    <Content Include="Assets\Fonts\NazaninBold.woff" />
+    <Content Include="Assets\Fonts\Yekan.eot" />
+    <Content Include="Assets\Fonts\Yekan.ttf" />
+    <Content Include="Assets\Fonts\Yekan.woff" />
+    <None Include="Properties\PublishProfiles\FTP.pubxml" />
+    <Content Include="Assets\Scripts\jquery-2.1.3.js" />
+    <Content Include="Properties\SlowCheetah\SlowCheetah.Transforms.targets" />
+    <None Include="T4MVC.tt.hooks.t4" />
+    <None Include="T4MVC.tt.settings.xml" />
+    <Content Include="Logs\Empty.txt" />
+    <Content Include="Assets\Scripts\jquery.validate.js" />
+    <Content Include="Assets\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Uploads\Images\Products\Empty.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <None Include="T4MVC.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>T4MVC.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Order\CheckOut.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Shared\_DefaultLayout.cshtml" />
+    <Content Include="Views\Shared\_MinimalLayout.cshtml" />
+    <Content Include="Views\Shared\_AsyncIndicator.cshtml" />
+    <Content Include="Views\Order\List.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\OrderModel.cshtml" />
+    <Content Include="Views\Account\_Login.cshtml" />
+    <Content Include="Views\Account\_Register.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\_UpdateProfile.cshtml" />
+    <Content Include="Views\Account\UpdateProfile.cshtml" />
+    <Content Include="Views\Order\_CheckOut.cshtml" />
+    <Content Include="Views\Order\_Track.cshtml" />
+    <Content Include="Views\Order\Track.cshtml" />
+    <Content Include="Views\Product\_Details.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\OrderComplaintModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\OrderComplaintModel.cshtml" />
+    <Content Include="Views\Order\_List.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\OrderModel.Summary.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Currency.Simple.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Currency.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Account\_ChangePassword.cshtml" />
+    <Content Include="Views\Home\Error.cshtml" />
+    <Content Include="Views\Home\_Error.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Boolean.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\OrderStatus.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\MultiSelectList.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\OrderStatus.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\MultiSelectList.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\CheckOutType.cshtml" />
+    <Content Include="Views\Shared\_MailerLayout.cshtml" />
+    <Content Include="Views\Notification\OrderSubmitted.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\ComplaintPriority.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\ComplaintPriority.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\ComplaintStatus.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\ComplaintStatus.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\CustomerGender.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\CustomerGender.cshtml" />
+    <Content Include="OutputCacheSettings.config">
+      <SubType>Designer</SubType>
+      <TransformOnBuild>true</TransformOnBuild>
+    </Content>
+    <None Include="OutputCacheSettings.Release.config">
+      <DependentUpon>OutputCacheSettings.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <Content Include="ConnectionStrings.config">
+      <SubType>Designer</SubType>
+      <TransformOnBuild>true</TransformOnBuild>
+    </Content>
+    <None Include="ConnectionStrings.Release.config">
+      <DependentUpon>ConnectionStrings.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <Content Include="Smtp.config">
+      <SubType>Designer</SubType>
+      <TransformOnBuild>true</TransformOnBuild>
+    </Content>
+    <None Include="Smtp.Release.config">
+      <DependentUpon>Smtp.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <Content Include="AppSettings.config">
+      <SubType>Designer</SubType>
+      <TransformOnBuild>true</TransformOnBuild>
+    </Content>
+    <None Include="AppSettings.Release.config">
+      <DependentUpon>AppSettings.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <Content Include="Views\Account\_ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Notification\PasswordResetRequested.cshtml" />
+    <Content Include="Views\Account\_ResetPasswordCallback.cshtml" />
+    <Content Include="Views\Account\ResetPasswordCallback.cshtml" />
+    <Content Include="Views\Notification\PasswordReset.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Cart\Form.cshtml" />
+    <Content Include="Views\Product\Details.cshtml" />
+    <Content Include="Views\Product\List.cshtml" />
+    <Content Include="Views\Cart\_Form.cshtml" />
+    <Content Include="Views\Product\_List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\DisplayTemplates\CartItemModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\ProductModel.cshtml" />
+    <Content Include="Views\Shared\_Aside.cshtml" />
+    <Content Include="Views\Shared\_LayoutBase.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_MainNav.cshtml" />
+    <Content Include="Views\Shared\_TopLeft.cshtml" />
+    <Content Include="Views\Shared\_TopRight.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Label="SlowCheetah">
+    <SlowCheetahToolsPath>$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\..\packages\SlowCheetah.2.5.14\tools\))</SlowCheetahToolsPath>
+    <SlowCheetah_EnableImportFromNuGet Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='' ">true</SlowCheetah_EnableImportFromNuGet>
+    <SlowCheetah_NuGetImportPath Condition=" '$(SlowCheetah_NuGetImportPath)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\Properties\SlowCheetah\SlowCheetah.Transforms.targets ))</SlowCheetah_NuGetImportPath>
+    <SlowCheetahTargets Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='true' and Exists('$(SlowCheetah_NuGetImportPath)') ">$(SlowCheetah_NuGetImportPath)</SlowCheetahTargets>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60045</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60045/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <Import Project="$(SlowCheetahTargets)" Condition="Exists('$(SlowCheetahTargets)')" Label="SlowCheetah" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

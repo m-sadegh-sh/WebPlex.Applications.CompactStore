@@ -1,0 +1,10 @@
+﻿@model RegisterModel
+
+@{
+    Layout = Views.Shared._MinimalLayout_cshtml;
+    ViewBag.Title = Resources.Views_Account_Register_Meta_Title;
+}
+
+<div id="WebPlex-RegisterContainer" class="WebPlex-BoxContainer WebPlex-Clearfix">
+    @Html.Partial(Views.Account._Register_cshtml, Model)
+</div>

@@ -1,0 +1,376 @@
+﻿.WebPlex-NavContainer {
+    padding: 20px 20px 10px !important;
+}
+
+.WebPlex-NavContainer .WebPlex-NavLogo {
+    background: url(../Images/Sprite.png) no-repeat 0 0;
+    height: 47px;
+    margin: 15px 5px 15px 13px;
+    text-indent: -9999px;
+    width: 282px;
+}
+
+.WebPlex-NavContainer .WebPlex-MainNav {
+    margin: 0;
+    padding: 0;
+}
+
+.WebPlex-MainNav > .WebPlex-Clearfix {
+    width: 0;
+}
+
+.WebPlex-NavContainer .WebPlex-NavItem {
+    display: inline-block;
+    position: relative;
+}
+
+.WebPlex-NavContainer .WebPlex-Fluid {
+    list-style: none;
+    overflow: initial;
+}
+
+.WebPlex-NavContainer .WebPlex-TopItem,
+.WebPlex-NavContainer .WebPlex-BottomItem {
+    list-style: none;
+    margin-left: 5px;
+}
+
+.WebPlex-NavContainer .WebPlex-TopItem {
+    margin-bottom: 5px;
+}
+
+.WebPlex-NavContainer .WebPlex-LastItem {
+    margin-left: 0;
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem {
+    z-index: 999;
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-TopItem {
+    margin-bottom: -36px;
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-BottomItem {
+    margin-top: -41px;
+}
+
+.WebPlex-NavContainer .WebPlex-NavAnchor {
+    background: rgba(245, 245, 245, 255);
+    border-style: solid;
+    border-width: 5px 0 0 0;
+    box-shadow: 0 2px 1px rgba(190, 190, 190, 255);
+    color: rgba(95, 95, 95, 255);
+    display: block;
+    font: bold 14px NazaninBold;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 108px;
+}
+
+.WebPlex-NavContainer .WebPlex-NavAnchor:hover {
+    background: rgba(230, 230, 230, 255);
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem .WebPlex-NavAnchor {
+    box-shadow: none;
+    color: rgba(255, 255, 255, 255);
+    margin-bottom: -10px;
+    padding-bottom: 10px;
+}
+
+.WebPlex-NavContainer .WebPlex-LastItem .WebPlex-NavAnchor {
+    width: 109px;
+}
+
+.WebPlex-NavContainer .WebPlex-NavText {
+    line-height: 20px;
+}
+
+.WebPlex-NavContainer .WebPlex-NavIcon {
+    background: none no-repeat center 8px;
+    display: block;
+    height: 21px;
+    padding: 4px 5px 6px;
+    transition: all 0.3s ease;
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem .WebPlex-NavIcon {
+    height: auto;
+    padding: 8px 5px 4px;
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem .WebPlex-NavIcon .WebPlex-ViewPort {
+    background: url(../Images/Sprite.png) no-repeat;
+    display: block;
+    height: 35px;
+    margin: 2px auto 0;
+    width: 36px;
+}
+
+.WebPlex-NavContainer .WebPlex-NewsManagement .WebPlex-NavAnchor,
+.WebPlex-ProductsContainer.WebPlex-NewsManagement,
+.WebPlex-ProductContainer.WebPlex-NewsManagement {
+    border-color: rgba(179, 75, 75, 255) !important;
+}
+
+.WebPlex-NavContainer .WebPlex-NewsManagement.WebPlex-ActiveItem .WebPlex-NavAnchor {
+    background-color: rgba(179, 75, 75, 255);
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-NewsManagement .WebPlex-NavIcon .WebPlex-ViewPort {
+    background-position: 0 -69px;
+}
+
+.WebPlex-NavContainer .WebPlex-ContentManagement .WebPlex-NavAnchor,
+.WebPlex-ProductsContainer.WebPlex-ContentManagement,
+.WebPlex-ProductContainer.WebPlex-ContentManagement {
+    border-color: rgba(75, 76, 179, 22) !important;
+}
+
+.WebPlex-NavContainer .WebPlex-ContentManagement.WebPlex-ActiveItem .WebPlex-NavAnchor {
+    background-color: rgba(75, 76, 179, 22);
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-ContentManagement .WebPlex-ViewPort {
+    background-position: 0 -69px;
+}
+
+.WebPlex-NavContainer .WebPlex-Notification .WebPlex-NavAnchor,
+.WebPlex-ProductsContainer.WebPlex-Notification,
+.WebPlex-ProductContainer.WebPlex-Notification {
+    border-color: rgba(75, 179, 95, 255) !important;
+}
+
+.WebPlex-NavContainer .WebPlex-Notification.WebPlex-ActiveItem .WebPlex-NavAnchor {
+    background-color: rgba(75, 179, 95, 255);
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-Notification .WebPlex-NavIcon .WebPlex-ViewPort {
+    background-position: 0 -69px;
+}
+
+.WebPlex-NavContainer .WebPlex-Profile .WebPlex-NavAnchor,
+.WebPlex-ProductsContainer.WebPlex-Profile,
+.WebPlex-ProductContainer.WebPlex-Profile {
+    border-color: rgba(179, 87, 75, 255) !important;
+}
+
+.WebPlex-NavContainer .WebPlex-Profile.WebPlex-ActiveItem .WebPlex-NavAnchor {
+    background-color: rgba(179, 87, 75, 255);
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-Profile .WebPlex-NavIcon .WebPlex-ViewPort {
+    background-position: 0 -69px;
+}
+
+.WebPlex-NavContainer .WebPlex-AccessManagement .WebPlex-NavAnchor,
+.WebPlex-ProductsContainer.WebPlex-AccessManagement,
+.WebPlex-ProductContainer.WebPlex-AccessManagement {
+    border-color: rgba(179, 75, 130, 255) !important;
+}
+
+.WebPlex-NavContainer .WebPlex-AccessManagement.WebPlex-ActiveItem .WebPlex-NavAnchor {
+    background-color: rgba(179, 75, 130, 255);
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-AccessManagement .WebPlex-NavIcon .WebPlex-ViewPort {
+    background-position: 0 -69px;
+}
+
+.WebPlex-NavContainer .WebPlex-Office .WebPlex-NavAnchor,
+.WebPlex-ProductsContainer.WebPlex-Office,
+.WebPlex-ProductContainer.WebPlex-Office {
+    border-color: rgba(75, 141, 179, 255) !important;
+}
+
+.WebPlex-NavContainer .WebPlex-Office.WebPlex-ActiveItem .WebPlex-NavAnchor {
+    background-color: rgba(75, 141, 179, 255);
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-Office .WebPlex-NavIcon .WebPlex-ViewPort {
+    background-position: 0 -69px;
+}
+
+.WebPlex-NavContainer .WebPlex-Tenders .WebPlex-NavAnchor,
+.WebPlex-ProductsContainer.WebPlex-Tenders,
+.WebPlex-ProductContainer.WebPlex-Tenders {
+    border-color: rgba(168, 179, 75, 255) !important;
+}
+
+.WebPlex-NavContainer .WebPlex-Tenders.WebPlex-ActiveItem .WebPlex-NavAnchor {
+    background-color: rgba(168, 179, 75, 255);
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-Tenders .WebPlex-NavIcon .WebPlex-ViewPort {
+    background-position: 0 -69px;
+}
+
+.WebPlex-NavContainer .WebPlex-Shopping .WebPlex-NavAnchor,
+.WebPlex-ProductsContainer.WebPlex-Shopping,
+.WebPlex-ProductContainer.WebPlex-Shopping {
+    border-color: rgba(127, 179, 75, 255) !important;
+}
+
+.WebPlex-NavContainer .WebPlex-Shopping.WebPlex-ActiveItem .WebPlex-NavAnchor {
+    background-color: rgba(127, 179, 75, 255);
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-Shopping .WebPlex-NavIcon .WebPlex-ViewPort {
+    background-position: 0 -69px;
+}
+
+.WebPlex-NavContainer .WebPlex-UserInterface .WebPlex-NavAnchor,
+.WebPlex-ProductsContainer.WebPlex-UserInterface,
+.WebPlex-ProductContainer.WebPlex-UserInterface {
+    border-color: rgba(168, 75, 179, 255) !important;
+}
+
+.WebPlex-NavContainer .WebPlex-UserInterface.WebPlex-ActiveItem .WebPlex-NavAnchor {
+    background-color: rgba(168, 75, 179, 255);
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-UserInterface .WebPlex-NavIcon .WebPlex-ViewPort {
+    background-position: 0 -69px;
+}
+
+.WebPlex-NavContainer .WebPlex-DailyEvents .WebPlex-NavAnchor,
+.WebPlex-ProductsContainer.WebPlex-DailyEvents,
+.WebPlex-ProductContainer.WebPlex-DailyEvents {
+    border-color: rgba(75, 179, 162, 255) !important;
+}
+
+.WebPlex-NavContainer .WebPlex-DailyEvents.WebPlex-ActiveItem .WebPlex-NavAnchor {
+    background-color: rgba(75, 179, 162, 255);
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-DailyEvents .WebPlex-NavIcon .WebPlex-ViewPort {
+    background-position: 0 -69px;
+}
+
+.WebPlex-NavContainer .WebPlex-Developer .WebPlex-NavAnchor,
+.WebPlex-ProductsContainer.WebPlex-Developer,
+.WebPlex-ProductContainer.WebPlex-Developer {
+    border-color: rgba(179, 157, 75, 255) !important;
+}
+
+.WebPlex-NavContainer .WebPlex-Developer.WebPlex-ActiveItem .WebPlex-NavAnchor {
+    background-color: rgba(179, 157, 75, 255);
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-Developer .WebPlex-NavIcon .WebPlex-ViewPort {
+    background-position: 0 -69px;
+}
+
+.WebPlex-NavContainer .WebPlex-SingleSignOn .WebPlex-NavAnchor,
+.WebPlex-ProductsContainer.WebPlex-SingleSignOn,
+.WebPlex-ProductContainer.WebPlex-SingleSignOn {
+    border-color: rgba(17, 223, 162, 255) !important;
+}
+
+.WebPlex-NavContainer .WebPlex-SingleSignOn.WebPlex-ActiveItem .WebPlex-NavAnchor {
+    background-color: rgba(17, 223, 162, 255);
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-SingleSignOn .WebPlex-NavIcon .WebPlex-ViewPort {
+    background-position: 0 -69px;
+}
+
+.WebPlex-NavContainer .WebPlex-Calendar .WebPlex-NavAnchor,
+.WebPlex-ProductsContainer.WebPlex-Calendar,
+.WebPlex-ProductContainer.WebPlex-Calendar {
+    border-color: rgba(127, 75, 179, 255) !important;
+}
+
+.WebPlex-NavContainer .WebPlex-Calendar.WebPlex-ActiveItem .WebPlex-NavAnchor {
+    background-color: rgba(127, 75, 179, 255);
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-Calendar .WebPlex-NavIcon .WebPlex-ViewPort {
+    background-position: 0 -69px;
+}
+
+.WebPlex-NavContainer .WebPlex-Infrastructure .WebPlex-NavAnchor,
+.WebPlex-ProductsContainer.WebPlex-Infrastructure,
+.WebPlex-ProductContainer.WebPlex-Infrastructure {
+    border-color: rgba(75, 179, 138, 255) !important;
+}
+
+.WebPlex-NavContainer .WebPlex-Infrastructure.WebPlex-ActiveItem .WebPlex-NavAnchor {
+    background-color: rgba(75, 179, 138, 255);
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-Infrastructure .WebPlex-NavIcon .WebPlex-ViewPort {
+    background-position: 0 -69px;
+}
+
+.WebPlex-NavContainer .WebPlex-User .WebPlex-NavAnchor,
+.WebPlex-ProductsContainer.WebPlex-User,
+.WebPlex-ProductContainer.WebPlex-User {
+    border-color: rgba(179, 128, 75, 255) !important;
+}
+
+.WebPlex-NavContainer .WebPlex-User.WebPlex-ActiveItem .WebPlex-NavAnchor {
+    background-color: rgba(179, 128, 75, 255);
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-User .WebPlex-NavIcon .WebPlex-ViewPort {
+    background-position: 0 -69px;
+}
+
+.WebPlex-NavContainer .WebPlex-Polling .WebPlex-NavAnchor,
+.WebPlex-ProductsContainer.WebPlex-Polling,
+.WebPlex-ProductContainer.WebPlex-Polling {
+    border-color: rgba(63, 24, 217, 255) !important;
+}
+
+.WebPlex-NavContainer .WebPlex-Polling.WebPlex-ActiveItem .WebPlex-NavAnchor {
+    background-color: rgba(63, 24, 217, 255);
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem.WebPlex-Polling .WebPlex-NavIcon .WebPlex-ViewPort {
+    background-position: 0 -69px;
+}
+
+.WebPlex-NavContainer .WebPlex-RemoveCategory .WebPlex-ViewPort {
+    display: none;
+    transition: width, height, margin 0.3s ease;
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem .WebPlex-RemoveCategory {
+    display: block;
+    left: 5px;
+    position: absolute;
+    text-indent: -999px;
+    top: 5px;
+    z-index: 1;
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem .WebPlex-RemoveCategory .WebPlex-ViewPort {
+    background: url(../Images/Sprite.png) no-repeat -399px 0;
+    display: block;
+    height: 12px;
+    overflow: hidden;
+    text-indent: -999px;
+    width: 12px;
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem:hover .WebPlex-NavIcon {
+    opacity: 0;
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem:hover .WebPlex-NavText {
+    color: transparent;
+}
+
+.WebPlex-NavContainer .WebPlex-ActiveItem:hover .WebPlex-RemoveCategory .WebPlex-ViewPort {
+    background-position: -414px 0;
+    height: 42px;
+    margin: 17px 29px 18px;
+    width: 40px;
+}
+
+.WebPlex-NavContainer .WebPlex-LastItem.WebPlex-ActiveItem:hover .WebPlex-RemoveCategory {
+    width: 107px;
+}

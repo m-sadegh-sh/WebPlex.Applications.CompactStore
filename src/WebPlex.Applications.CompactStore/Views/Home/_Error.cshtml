@@ -1,0 +1,31 @@
+﻿@model ErrorSummaryModel
+
+<div class="WebPlex-FormContainer WebPlex-Clearfix">
+    <h3 class="WebPlex-Title WebPlex-Clearfix">
+        @Html.ActionLink(Resources.Views_BackToHome, MVC.Home.Root(), new {
+            @class = "WebPlex-BackToHome WebPlex-PullLeft"
+        })
+        @Resources.Views_Home_Error_FormTitle
+    </h3>
+    <div class="WebPlex-FormGroup WebPlex-Clearfix">
+        <div class="WebPlex-FormFields WebPlex-PullLeft WebPlex-Clearfix">
+            <div class="WebPlex-FormRow">
+                @Model.ErrorNum
+            </div>
+        </div>
+        <p class="WebPlex-Description">
+            @Html.Raw(Model.Message)
+        </p>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage)) {
+            <p class="WebPlex-Description WebPlex-Secondary">
+                @Html.Raw(Model.ErrorMessage)
+            </p>
+        }
+    </div>
+</div>
+<div class="WebPlex-ButtonStack WebPlex-PullLeft WebPlex-Clearfix">
+    @Html.ActionLink(Resources.Views_Error_Contact, MVC.Home.Contact(), new {
+        @class = "WebPlex-Button WebPlex-Contact"
+    }).UseContent(@"<span class=""WebPlex-ViewPort""></span>{0}")
+</div>

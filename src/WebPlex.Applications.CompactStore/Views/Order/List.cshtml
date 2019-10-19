@@ -1,0 +1,9 @@
+﻿@model OrderListViewModel
+
+@{
+    ViewBag.Title = Resources.Views_Order_List_Meta_Title;
+}
+
+<div id="WebPlex-ListContainer" class="WebPlex-BoxContainer WebPlex-GridReversed WebPlex-Clearfix">
+    @Html.Partial(Views.Order._List_cshtml, Model)
+</div>

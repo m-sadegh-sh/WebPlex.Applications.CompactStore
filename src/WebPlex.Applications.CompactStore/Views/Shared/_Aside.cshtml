@@ -1,0 +1,49 @@
+﻿@using SortDirection = WebPlex.Applications.CompactStore.Models.SortDirection
+@{
+    var orders = EnumHelpers.GetNamesValues<SortOrder>();
+    var defaultOrder = orders.ElementAt(0);
+    var isProductController = ViewContext.RouteData.GetRequiredString("Controller") == MVC.Product.Name;
+}
+
+<div class="WebPlex-AsideContainer WebPlex-PullRight WebPlex-Clearfix">
+    <ul class="WebPlex-AsideGroup WebPlex-Clearfix">
+        <li>
+            @using (Html.BeginForm(CurrentCategory != null ? MVC.Product.ListByCategory(CurrentCategory.Slug, null, null, null, null, null) : MVC.Product.List(null, null, null, null, null), FormMethod.Get, new {
+                id = "WebPlex-Search"
+            })) {
+                @Html.TextBox("Query", "", new {
+                    @class = "WebPlex-Query",
+                    autocomplete = "off",
+                    @placeholder = Resources.Views_Shared_Aside_Search
+                })
+                <span class="WebPlex-Icon"></span>
+            }
+        </li>
+    </ul>
+    <ul class="WebPlex-AsideGroup WebPlex-Clearfix">
+        <li class="WebPlex-Title WebPlex-PullLeft">
+            <span>
+                @Resources.Views_Shared_Aside_SortGroup
+            </span>
+        </li>
+        <li>
+            @Html.RouteLink(defaultOrder.Key, CurrentCategory != null ? MVC.Product.ListByCategory(CurrentCategory.Slug, null, null, null, null, null) : MVC.Product.List(null, null, null, null, null), new {
+                @class = CurrentSortOrder == null && isProductController ? "Active" : null
+            })
+        </li>
+        @foreach (var order in orders) {
+            if (order.Value == defaultOrder.Value) {
+                continue;
+            }
+
+            <li>
+                <a href="@Url.Action(CurrentCategory != null ? MVC.Product.ListByCategory(CurrentCategory.Slug, null, order.Value, CurrentSortOrder == order.Value && CurrentSortDirection == SortDirection.Ascending ? SortDirection.Descending : SortDirection.Ascending, null, null) : MVC.Product.List(null, order.Value, CurrentSortOrder == order.Value && CurrentSortDirection == SortDirection.Ascending ? SortDirection.Descending : SortDirection.Ascending, null, null))" class="@(CurrentSortOrder == order.Value ? "Active" : null)">
+                    @order.Key
+                    <span class="WebPlex-SortDirection WebPlex-PullLeft WebPlex-@(CurrentSortOrder == order.Value && CurrentSortDirection == SortDirection.Ascending ? SortDirection.Descending : SortDirection.Ascending)">
+                        <span class="WebPlex-ViewPort"></span>
+                    </span>
+                </a>
+            </li>
+        }
+    </ul>
+</div>

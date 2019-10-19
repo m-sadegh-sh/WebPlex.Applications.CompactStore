@@ -1,0 +1,7 @@
+﻿@model bool
+
+@{
+    var selectList = Model.ToSelectList();
+}
+
+@Html.EditorFor(model => selectList)

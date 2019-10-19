@@ -1,0 +1,10 @@
+﻿@model TrackViewModel
+
+@{
+    Layout = Views.Shared._MinimalLayout_cshtml;
+    ViewBag.Title = Resources.Views_Order_Track_Meta_Title;
+}
+
+<div id="WebPlex-TrackContainer" class="WebPlex-BoxContainer WebPlex-Clearfix">
+    @Html.Partial(Views.Order._Track_cshtml, Model)
+</div>

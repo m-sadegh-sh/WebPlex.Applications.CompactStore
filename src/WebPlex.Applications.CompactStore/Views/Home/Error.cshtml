@@ -1,0 +1,10 @@
+﻿@model ErrorSummaryModel
+
+@{
+    Layout = Views.Shared._MinimalLayout_cshtml;
+    ViewBag.Title = Model.Heading;
+}
+
+<div id="WebPlex-ErrorContainer" class="WebPlex-BoxContainer WebPlex-Clearfix">
+    @Html.Partial(Views.Home._Error_cshtml, Model)
+</div>
