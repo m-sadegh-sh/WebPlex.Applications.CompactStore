@@ -1,0 +1,1 @@
+# WebPlex.Applications.CompactStore
